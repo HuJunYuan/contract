@@ -53,16 +53,7 @@
   <ItemGroup>
     <Compile Include="AppCodeMasterRepository.cs" />
     <Compile Include="AppConfigRepository.cs" />
-    <Compile Include="ClassroomRepository.cs" />
-    <Compile Include="CollegeRepository.cs" />
-    <Compile Include="entorRepository.cs" />
-    <Compile Include="entorToRemoRepository.cs" />
-    <Compile Include="GradeRepository.cs" />
-    <Compile Include="LessonInfoRepository.cs" />
-    <Compile Include="LessonScheduleRepository.cs" />
-    <Compile Include="LocalRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RemoRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EIP.Entity\EIP.Entity.csproj">

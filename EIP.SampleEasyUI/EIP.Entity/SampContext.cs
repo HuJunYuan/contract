@@ -47,60 +47,6 @@ namespace EIP.Entity
 
         #region 业务实体模型定义
 
-        /// <summary>
-        /// 教室信息
-        ///    
-        ///</summary>
-        public DbSet<Classroom> Classroom { get; set; }
-
-
-        /// <summary>
-        /// 学院信息
-        ///    
-        ///</summary>
-        public DbSet<College> College { get; set; }
-
-
-        /// <summary>
-        /// 学生信息表
-        ///</summary>
-        public DbSet<Grade> Grade { get; set; }
-
-
-        /// <summary>
-        /// 课程信息表
-        ///</summary>
-        public DbSet<LessonInfo> LessonInfo { get; set; }
-
-
-        /// <summary>
-        /// 课程安排
-        ///</summary>
-        public DbSet<LessonSchedule> LessonSchedule { get; set; }
-
-
-        /// <summary>
-        /// 教师
-        ///</summary>
-        public DbSet<entor> entor { get; set; }
-
-
-        /// <summary>
-        /// 用来记录每个班级的任课教师
-        ///</summary>
-        public DbSet<entorToRemo> entorToRemo { get; set; }
-
-
-        /// <summary>
-        /// 班级
-        ///</summary>
-        public DbSet<Remo> Remo { get; set; }
-
-
-        /// <summary>
-        /// 用来记录地域相关属性
-        ///</summary>
-        public DbSet<Local> Local { get; set; }
 
         #endregion
 

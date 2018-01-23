@@ -186,17 +186,9 @@
     <Compile Include="App_Start\UnityConfig.cs" />
     <Compile Include="Controllers\AppCodeMasterController.cs" />
     <Compile Include="Controllers\AppConfigController.cs" />
-    <Compile Include="Controllers\ClassroomController.cs" />
-    <Compile Include="Controllers\CollegeController.cs" />
-    <Compile Include="Controllers\entorController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
-    <Compile Include="Controllers\GradeController.cs" />
-    <Compile Include="Controllers\LessonInfoController.cs" />
-    <Compile Include="Controllers\LocalController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\IconSelectController.cs" />
-    <Compile Include="Controllers\CountManAndWomanController.cs" />
-    <Compile Include="Controllers\RemoController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -892,41 +884,7 @@
     <Content Include="Views\AppConfig\form.cshtml" />
     <Content Include="Views\AppConfig\list.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\Classroom\detail.cshtml" />
-    <Content Include="Views\Classroom\form.cshtml" />
-    <Content Include="Views\Classroom\list.cshtml" />
-    <Content Include="Views\College\detail.cshtml" />
-    <Content Include="Views\College\form.cshtml" />
-    <Content Include="Views\College\list.cshtml" />
-    <Content Include="Views\entorToRemo\detail.cshtml" />
-    <Content Include="Views\entorToRemo\form.cshtml" />
-    <Content Include="Views\entorToRemo\list.cshtml" />
-    <Content Include="Views\entor\detail.cshtml" />
-    <Content Include="Views\entor\form.cshtml" />
-    <Content Include="Views\entor\list.cshtml" />
-    <Content Include="Views\Grade\detail.cshtml" />
-    <Content Include="Views\Grade\form.cshtml" />
-    <Content Include="Views\Grade\list.cshtml" />
-    <Content Include="Views\LessonInfo\detail.cshtml" />
-    <Content Include="Views\LessonInfo\form.cshtml" />
-    <Content Include="Views\LessonInfo\list.cshtml" />
-    <Content Include="Views\LessonSchedule\detail.cshtml" />
-    <Content Include="Views\LessonSchedule\form.cshtml" />
-    <Content Include="Views\LessonSchedule\list.cshtml" />
-    <Content Include="Views\Remo\detail.cshtml" />
-    <Content Include="Views\Remo\form.cshtml" />
-    <Content Include="Views\Remo\list.cshtml" />
-    <Content Include="Views\CountManAndWoman\list.cshtml" />
-    <Content Include="Views\Grade\Remolist.cshtml" />
-    <Content Include="Views\Grade\ClassAndStudentChoose.cshtml" />
-    <Content Include="Views\Grade\RemolistForClassAndStuChoose.cshtml" />
-    <Content Include="Views\Remo\AddClassAndStudents.cshtml" />
-    <Content Include="Views\Local\Tree.cshtml" />
     <Content Include="Views\Home\form.cshtml" />
-    <Content Include="Views\Local\detail.cshtml" />
-    <Content Include="Views\Local\form.cshtml" />
-    <Content Include="Views\Local\list.cshtml" />
-    <Content Include="Views\Local\localinfo.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>

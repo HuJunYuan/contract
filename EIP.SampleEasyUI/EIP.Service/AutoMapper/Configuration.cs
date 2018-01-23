@@ -13,7 +13,7 @@ namespace EIP.Service.AutoMapper
         public static void Configure()
         {
             //Mapper.AddProfile<Profiles.PMPostProfile>();
-            Mapper.AddProfile<Profiles.StudentProfile>();
+            //Mapper.AddProfile<Profiles.StudentProfile>();
 
             Mapper.AddProfile<Profiles.CodeMasterProfile>();
 

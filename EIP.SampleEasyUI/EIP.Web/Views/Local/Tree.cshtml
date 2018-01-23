@@ -1,0 +1,145 @@
+﻿@model EIP.Entity.Local
+@{
+
+    Layout = "~/views/shared/_layout.cshtml";
+}
+
+@section head{
+    <link href="~/Content/css/index.css" rel="stylesheet" />
+}
+
+
+
+<div id="TreeList" class="easyui-layout" data-options="fit:true">
+    <div data-options="region:'west',title:'地域',split:true" style="width:20%; background:#DBCBB8;">
+        <ul id="Tree" class="easyui-tree"></ul>
+    </div>
+    <div id="TreeInfo" data-options="region:'center',title:'详情'" style="padding:5px;background:#BFDBB8;">
+    </div>
+</div>
+
+<div id="dlg_local" class="easyui-dialog" title="地域信息编辑" style="width: 400px; height: 400px; padding: 10px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true">
+    Loading...
+</div>
+
+
+<div id="mm" class="easyui-menu" style="width:120px;">
+    <div data-options="name:'new',iconCls:'icon-add'">新建</div>
+    <div id="editMenu" data-options="name:'edit',iconCls:'icon-save'">修改</div>
+    <div id="removeMenu" data-options="name:'remove',iconCls:'icon-remove'">删除</div>
+    <div data-options="name:'sep',iconCls:'icon-print',name:'menurefresh'">刷新</div>
+</div>
+
+<script>
+    //面板相关操作
+    $("#TreeList").bind('contextmenu', function (e) {
+        $('#TreeList').menu("disableItem", $("#removeMenu"));
+        $('#TreeList').menu("disableItem", $("#editMenu"));
+        e.preventDefault();
+        $('#mm').menu('show', {
+            left: e.pageX,
+            top: e.pageY
+        });
+    });
+    //菜单相关组件
+    function menuAdd() {
+        debugger;
+        var node = $('#Tree').tree("getSelected");
+        if (node == null)
+            $("#TreeInfo").panel("refresh", "/Local/load_add_local_form?id=" + 0);
+        else {
+            $("#TreeInfo").panel("refresh", "/Local/load_add_local_form?id=" + node.id);
+        }
+               
+    }
+    function menuedit() {
+
+    }
+    function menuRemove() {
+        doDel();
+
+        
+    }
+    function menuRefresh() {
+        window.location.reload();
+
+
+    }
+
+
+    $("#mm").menu({
+        onClick: function (item) {
+            switch (item.name) {
+                case "new":
+                    menuAdd();
+                    break;
+                case "edit":
+                    menuedit();
+                    break;
+                case "remove":
+                    menuRemove();
+                    break;
+                case "menurefresh":
+                    menuRefresh();
+                    break;
+                default:
+                    menuRefresh();
+            }
+        }
+    });
+
+
+    //树的相关操作
+    $('#Tree').tree({
+        url: '/Local/querylocaltree',
+        onClick: function (node) {
+            $("#TreeInfo").panel("refresh", "/Local/query_local_by_id?id=" + node.id);
+        },
+        onContextMenu: function (e, node) {
+            $('#TreeList').menu("enableItem", $("#removeMenu"));
+            $('#TreeList').menu("enableItem", $("#editMenu"));
+            e.preventDefault();
+            $('#mm').menu('show', {
+                left: e.pageX,
+                top: e.pageY
+            });
+        }
+    });
+    // 表单验证
+    function validate() {
+        // 验证
+        var isValid = $("#localinfo").form("validate");
+        if (!isValid) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+        return true;
+    }
+
+    //保存
+    function doSave() {
+        debugger;
+
+        // 表单数据提交
+        var formData = $("#form_Local").form("getData");
+        debugger;
+        App.action(App.getUrl("/Local/save"), formData,
+            function (data) {
+                $("#Tree").tree("reload");
+            });
+        $("#Tree").tree("reload");
+    }
+
+    function doAdd() {
+
+    }
+
+    function doDel() {
+        // 表单数据提交
+        var formData = $("#form_Local").form("getData");
+        App.action(App.getUrl("/Local/remove?localID=" + formData.LocalID));
+        $("#Tree").tree("reload");
+    }
+
+</script>

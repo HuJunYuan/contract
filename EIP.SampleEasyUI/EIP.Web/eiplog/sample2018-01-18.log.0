@@ -1,0 +1,246 @@
+2018-01-18 16:57:28,874 [17] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 16:57:28,887 [17] INFO  HADOOP\hujunyuan [START]
+2018-01-18 16:57:29,051 [17] DEBUG HADOOP\hujunyuan Executed in     76 ms,	SQL:SELECT TOP (2)      [Extent1].[SId] AS [SId],      [Extent1].[StudentName] AS [StudentName],      [Extent1].[Sex] AS [Sex],      [Extent1].[Birthday] AS [Birthday],      [Extent1].[Email] AS [Email],      [Extent1].[Hometown] AS [Hometown],      [Extent1].[Phone_number] AS [Phone_number],      [Extent1].[StudentId] AS [StudentId],      [Extent1].[RId] AS [RId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Grade] AS [Extent1]     WHERE [Extent1].[SId] = @'187'
+2018-01-18 16:57:29,062 [17] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.Find() [END]
+2018-01-18 16:57:29,065 [17] INFO  HADOOP\hujunyuan [END]
+2018-01-18 16:57:29,214 [9] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 16:57:29,222 [9] INFO  HADOOP\hujunyuan [START]
+2018-01-18 16:57:29,251 [19] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 16:57:29,292 [18] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 16:57:29,336 [18] INFO  HADOOP\hujunyuan [START]
+2018-01-18 16:57:29,370 [9] DEBUG HADOOP\hujunyuan Executed in     37 ms,	SQL:SELECT      [Extent1].[LocalID] AS [LocalID],      [Extent1].[LocalNum] AS [LocalNum],      [Extent1].[LocalName] AS [LocalName],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[admin_level] AS [admin_level],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Local] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (1 = [Extent1].[admin_level])
+2018-01-18 16:57:29,371 [19] INFO  HADOOP\hujunyuan [START]
+2018-01-18 16:57:29,522 [18] INFO  HADOOP\hujunyuan [END]
+2018-01-18 16:57:29,560 [19] INFO  HADOOP\hujunyuan [END]
+2018-01-18 16:57:29,601 [18] ERROR HADOOP\hujunyuan The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.JsonResult queryCounty(Int32)' in 'EIP.Web.Controllers.LocalController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.JsonResult queryCounty(Int32)' in 'EIP.Web.Controllers.LocalController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+   在 System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   在 System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   在 System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2018-01-18 16:57:29,704 [19] ERROR HADOOP\hujunyuan The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.JsonResult queryCity(Int32)' in 'EIP.Web.Controllers.LocalController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.JsonResult queryCity(Int32)' in 'EIP.Web.Controllers.LocalController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+   在 System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   在 System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   在 System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2018-01-18 16:57:29,708 [9] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.LocalService.getProvince() [END]
+2018-01-18 16:57:30,066 [9] INFO  HADOOP\hujunyuan [END]
+2018-01-18 16:59:46,439 [28] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 16:59:46,469 [28] INFO  HADOOP\hujunyuan [START]
+2018-01-18 16:59:46,940 [28] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT TOP (2)      [Extent1].[SId] AS [SId],      [Extent1].[StudentName] AS [StudentName],      [Extent1].[Sex] AS [Sex],      [Extent1].[Birthday] AS [Birthday],      [Extent1].[Email] AS [Email],      [Extent1].[Hometown] AS [Hometown],      [Extent1].[Phone_number] AS [Phone_number],      [Extent1].[StudentId] AS [StudentId],      [Extent1].[RId] AS [RId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Grade] AS [Extent1]     WHERE [Extent1].[SId] = @'187'
+2018-01-18 16:59:46,943 [28] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.Find() [END]
+2018-01-18 16:59:46,945 [28] INFO  HADOOP\hujunyuan [END]
+2018-01-18 16:59:47,057 [25] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 16:59:47,063 [25] INFO  HADOOP\hujunyuan [START]
+2018-01-18 16:59:47,117 [27] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 16:59:47,203 [28] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 16:59:47,293 [28] INFO  HADOOP\hujunyuan [START]
+2018-01-18 16:59:47,309 [25] DEBUG HADOOP\hujunyuan Executed in     63 ms,	SQL:SELECT      [Extent1].[LocalID] AS [LocalID],      [Extent1].[LocalNum] AS [LocalNum],      [Extent1].[LocalName] AS [LocalName],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[admin_level] AS [admin_level],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Local] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (1 = [Extent1].[admin_level])
+2018-01-18 16:59:47,370 [27] INFO  HADOOP\hujunyuan [START]
+2018-01-18 16:59:47,408 [28] INFO  HADOOP\hujunyuan [END]
+2018-01-18 16:59:47,409 [25] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.LocalService.getProvince() [END]
+2018-01-18 16:59:47,537 [27] INFO  HADOOP\hujunyuan [END]
+2018-01-18 16:59:47,606 [28] ERROR HADOOP\hujunyuan The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.JsonResult queryCounty(Int32)' in 'EIP.Web.Controllers.LocalController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.JsonResult queryCounty(Int32)' in 'EIP.Web.Controllers.LocalController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+   在 System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   在 System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   在 System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2018-01-18 16:59:47,609 [25] INFO  HADOOP\hujunyuan [END]
+2018-01-18 16:59:47,801 [27] ERROR HADOOP\hujunyuan The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.JsonResult queryCity(Int32)' in 'EIP.Web.Controllers.LocalController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.JsonResult queryCity(Int32)' in 'EIP.Web.Controllers.LocalController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+   在 System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   在 System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   在 System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2018-01-18 17:03:27,512 [23] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:03:27,524 [23] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:03:27,569 [23] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:03:29,477 [23] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:03:29,487 [23] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:03:29,670 [23] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select T2.*,(Local.LocalName + T2.LocalName) as AreaName from(select T1.*, Local.LocalName + T1.ln1 as LocalName from(select T0.*, Local.LocalName as ln1 from(select Grade.*, Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag = 0 and Grade.StudentName like '%') as T0 left join Local on  T0.Other = Local.LocalNum) as T1 left join Local on LEFT(T1.Other, 4) = Local.LocalNum) as T2 left join Local on LEFT(T2.Other, 2) = Local.LocalNum) AS T 
+2018-01-18 17:03:29,723 [23] DEBUG HADOOP\hujunyuan Executed in     30 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, T2.*,(Local.LocalName + T2.LocalName) as AreaName from(select T1.*, Local.LocalName + T1.ln1 as LocalName from(select T0.*, Local.LocalName as ln1 from(select Grade.*, Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag = 0 and Grade.StudentName like '%') as T0 left join Local on  T0.Other = Local.LocalNum) as T1 left join Local on LEFT(T1.Other, 4) = Local.LocalNum) as T2 left join Local on LEFT(T2.Other, 2) = Local.LocalNum) AS T WHERE row_number between 1 and 10
+2018-01-18 17:03:29,744 [23] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGradeUseCodeManager() [END]
+2018-01-18 17:03:29,747 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:03:29,760 [23] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:03:29,772 [29] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:03:30,011 [29] DEBUG HADOOP\hujunyuan Executed in     30 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select T2.*,(Local.LocalName + T2.LocalName) as AreaName from(select T1.*, Local.LocalName + T1.ln1 as LocalName from(select T0.*, Local.LocalName as ln1 from(select Grade.*, Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag = 0 and Grade.StudentName like '%') as T0 left join Local on  T0.Other = Local.LocalNum) as T1 left join Local on LEFT(T1.Other, 4) = Local.LocalNum) as T2 left join Local on LEFT(T2.Other, 2) = Local.LocalNum) AS T 
+2018-01-18 17:03:30,038 [29] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, T2.*,(Local.LocalName + T2.LocalName) as AreaName from(select T1.*, Local.LocalName + T1.ln1 as LocalName from(select T0.*, Local.LocalName as ln1 from(select Grade.*, Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag = 0 and Grade.StudentName like '%') as T0 left join Local on  T0.Other = Local.LocalNum) as T1 left join Local on LEFT(T1.Other, 4) = Local.LocalNum) as T2 left join Local on LEFT(T2.Other, 2) = Local.LocalNum) AS T WHERE row_number between 1 and 10
+2018-01-18 17:03:30,051 [29] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGradeUseCodeManager() [END]
+2018-01-18 17:03:30,055 [29] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:03:30,932 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:03:30,942 [29] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:03:30,992 [29] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT TOP (2)      [Extent1].[SId] AS [SId],      [Extent1].[StudentName] AS [StudentName],      [Extent1].[Sex] AS [Sex],      [Extent1].[Birthday] AS [Birthday],      [Extent1].[Email] AS [Email],      [Extent1].[Hometown] AS [Hometown],      [Extent1].[Phone_number] AS [Phone_number],      [Extent1].[StudentId] AS [StudentId],      [Extent1].[RId] AS [RId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Grade] AS [Extent1]     WHERE [Extent1].[SId] = @'187'
+2018-01-18 17:03:30,994 [29] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.Find() [END]
+2018-01-18 17:03:31,001 [29] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:03:31,229 [23] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:03:31,237 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:03:31,263 [23] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:03:31,276 [29] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:03:31,471 [23] DEBUG HADOOP\hujunyuan Executed in     51 ms,	SQL:SELECT      [Extent1].[LocalID] AS [LocalID],      [Extent1].[LocalNum] AS [LocalNum],      [Extent1].[LocalName] AS [LocalName],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[admin_level] AS [admin_level],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Local] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (1 = [Extent1].[admin_level])
+2018-01-18 17:03:31,581 [29] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:03:31,583 [23] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.LocalService.getProvince() [END]
+2018-01-18 17:03:31,629 [23] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:03:31,630 [29] ERROR HADOOP\hujunyuan The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.JsonResult queryCity(Int32)' in 'EIP.Web.Controllers.LocalController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.JsonResult queryCity(Int32)' in 'EIP.Web.Controllers.LocalController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+   在 System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   在 System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   在 System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2018-01-18 17:03:31,736 [23] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:03:31,863 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:03:31,873 [23] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:03:31,875 [29] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:03:31,967 [23] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:03:32,103 [29] DEBUG HADOOP\hujunyuan Executed in     79 ms,	SQL:SELECT      [Extent1].[LocalID] AS [LocalID],      [Extent1].[LocalNum] AS [LocalNum],      [Extent1].[LocalName] AS [LocalName],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[admin_level] AS [admin_level],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Local] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (1 = [Extent1].[admin_level])
+2018-01-18 17:03:32,125 [23] ERROR HADOOP\hujunyuan The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.JsonResult queryCounty(Int32)' in 'EIP.Web.Controllers.LocalController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'id' of non-nullable type 'System.Int32' for method 'System.Web.Mvc.JsonResult queryCounty(Int32)' in 'EIP.Web.Controllers.LocalController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+   在 System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   在 System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   在 System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2018-01-18 17:03:32,132 [29] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.LocalService.getProvince() [END]
+2018-01-18 17:03:32,249 [29] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:09:03,247 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:09:03,268 [29] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:09:03,440 [29] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:09:05,070 [27] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:09:05,079 [27] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:09:05,241 [27] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select T2.*,(Local.LocalName + T2.LocalName) as AreaName from(select T1.*, Local.LocalName + T1.ln1 as LocalName from(select T0.*, Local.LocalName as ln1 from(select Grade.*, Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag = 0 and Grade.StudentName like '%') as T0 left join Local on  T0.Other = Local.LocalNum) as T1 left join Local on LEFT(T1.Other, 4) = Local.LocalNum) as T2 left join Local on LEFT(T2.Other, 2) = Local.LocalNum) AS T 
+2018-01-18 17:09:05,273 [27] DEBUG HADOOP\hujunyuan Executed in     27 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, T2.*,(Local.LocalName + T2.LocalName) as AreaName from(select T1.*, Local.LocalName + T1.ln1 as LocalName from(select T0.*, Local.LocalName as ln1 from(select Grade.*, Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag = 0 and Grade.StudentName like '%') as T0 left join Local on  T0.Other = Local.LocalNum) as T1 left join Local on LEFT(T1.Other, 4) = Local.LocalNum) as T2 left join Local on LEFT(T2.Other, 2) = Local.LocalNum) AS T WHERE row_number between 1 and 10
+2018-01-18 17:09:05,283 [27] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGradeUseCodeManager() [END]
+2018-01-18 17:09:05,589 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:09:05,593 [27] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:09:05,742 [29] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:09:05,860 [29] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select T2.*,(Local.LocalName + T2.LocalName) as AreaName from(select T1.*, Local.LocalName + T1.ln1 as LocalName from(select T0.*, Local.LocalName as ln1 from(select Grade.*, Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag = 0 and Grade.StudentName like '%') as T0 left join Local on  T0.Other = Local.LocalNum) as T1 left join Local on LEFT(T1.Other, 4) = Local.LocalNum) as T2 left join Local on LEFT(T2.Other, 2) = Local.LocalNum) AS T 
+2018-01-18 17:09:05,907 [29] DEBUG HADOOP\hujunyuan Executed in     27 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY SId ) as row_number, T2.*,(Local.LocalName + T2.LocalName) as AreaName from(select T1.*, Local.LocalName + T1.ln1 as LocalName from(select T0.*, Local.LocalName as ln1 from(select Grade.*, Remo_id from dbo.Grade left join Remo on Remo.RId = Grade.RId  where dbo.Grade.LogicDeleteFlag = 0 and Grade.StudentName like '%') as T0 left join Local on  T0.Other = Local.LocalNum) as T1 left join Local on LEFT(T1.Other, 4) = Local.LocalNum) as T2 left join Local on LEFT(T2.Other, 2) = Local.LocalNum) AS T WHERE row_number between 1 and 10
+2018-01-18 17:09:05,917 [29] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.QueryGradeUseCodeManager() [END]
+2018-01-18 17:09:05,924 [29] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:09:06,720 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:09:06,736 [29] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:09:06,816 [29] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT TOP (2)      [Extent1].[SId] AS [SId],      [Extent1].[StudentName] AS [StudentName],      [Extent1].[Sex] AS [Sex],      [Extent1].[Birthday] AS [Birthday],      [Extent1].[Email] AS [Email],      [Extent1].[Hometown] AS [Hometown],      [Extent1].[Phone_number] AS [Phone_number],      [Extent1].[StudentId] AS [StudentId],      [Extent1].[RId] AS [RId],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Grade] AS [Extent1]     WHERE [Extent1].[SId] = @'191'
+2018-01-18 17:09:06,819 [29] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.GradeService.Find() [END]
+2018-01-18 17:09:06,821 [29] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:09:06,981 [27] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:09:06,986 [27] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:09:07,167 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:09:07,168 [27] DEBUG HADOOP\hujunyuan Executed in     29 ms,	SQL:SELECT      [Extent1].[LocalID] AS [LocalID],      [Extent1].[LocalNum] AS [LocalNum],      [Extent1].[LocalName] AS [LocalName],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[admin_level] AS [admin_level],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Local] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (1 = [Extent1].[admin_level])
+2018-01-18 17:09:07,174 [29] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:09:07,185 [27] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.LocalService.getProvince() [END]
+2018-01-18 17:09:07,444 [27] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:09:07,486 [29] DEBUG HADOOP\hujunyuan Executed in     41 ms,	SQL:SELECT      [Extent1].[LocalID] AS [LocalID],      [Extent1].[LocalNum] AS [LocalNum],      [Extent1].[LocalName] AS [LocalName],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[admin_level] AS [admin_level],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Local] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (1 = [Extent1].[admin_level])
+2018-01-18 17:09:07,559 [29] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.LocalService.getProvince() [END]
+2018-01-18 17:09:07,576 [29] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:09:10,185 [29] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:09:10,191 [29] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:09:10,313 [29] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT      [Extent1].[LocalID] AS [LocalID],      [Extent1].[LocalNum] AS [LocalNum],      [Extent1].[LocalName] AS [LocalName],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[admin_level] AS [admin_level],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Local] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'5')
+2018-01-18 17:09:10,319 [29] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.LocalService.getCity() [END]
+2018-01-18 17:09:10,321 [29] INFO  HADOOP\hujunyuan [END]
+2018-01-18 17:09:12,481 [25] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-18 17:09:12,490 [25] INFO  HADOOP\hujunyuan [START]
+2018-01-18 17:09:12,544 [25] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:SELECT      [Extent1].[LocalID] AS [LocalID],      [Extent1].[LocalNum] AS [LocalNum],      [Extent1].[LocalName] AS [LocalName],      [Extent1].[ParentId] AS [ParentId],      [Extent1].[admin_level] AS [admin_level],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[Local] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ParentId] = @'6')
+2018-01-18 17:09:12,551 [25] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.LocalService.getCounty() [END]
+2018-01-18 17:09:12,554 [25] INFO  HADOOP\hujunyuan [END]

@@ -1,0 +1,188 @@
+﻿
+@{
+    Layout = "~/views/shared/_layout.cshtml";
+}
+@section head{
+}
+
+@*<table id="grid_grade" class="easyui-datagrid" fit="true"
+           data-options="rownumbers:true,pagination:true,url:'query_grade',toolbar:'#grid_toolbar',onClickRow:doDetail">
+        <thead>
+            <tr>
+                <th data-options="field:'ck',checkbox:true"></th>
+                <th data-options="field:'SId',width:100,hidden:true">SId</th>
+                <th data-options="field:'StudentId',width:100">学生学号</th>
+                <th data-options="field:'StudentName',width:100">学生姓名</th>
+                <th data-options="field:'RId',width:100,hidden:true">所在班级编号</th>
+                <th data-options="field:'Remo_id',width:100">所在班级</th>
+                <th data-options="field:'SexName',width:100">性别</th>
+                <th data-options="field:'Sex',width:100,hidden:true">性别</th>
+                <th data-options="field:'Birthday',width:100,formatter:formDate">出生日期</th>
+                <th data-options="field:'Email',width:100">电子邮件</th>
+                <th data-options="field:'Hometown',width:100">户籍所在地</th>
+                <th data-options="field:'Phone_number',width:100">电话号码</th>
+                <th data-options="field:'Other',width:100">
+                    备注
+
+            </tr>
+        </thead>
+    </table>*@
+
+<table id="grid_grade" class="easyui-datagrid" fit="true"></table>
+
+<div id="grid_gradetoolbar" style="padding:5px;height:auto">
+    <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
+    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入学生姓名" })
+    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
+
+    <input id="SearchBatch" class="easyui-searchbox" style="width:300px" data-options="searcher:searchSelect,prompt:'Please Input Value',menu:'#mm'" />
+    <div id="mm" style="width:120px">
+        <div data-options="name:'StudentName',iconCls:'icon-ok'">学生姓名</div>
+        <div data-options="name:'StudentId'">学生学号</div>
+    </div>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doTurnToClassAndStudentChoose()">打开班级学生列表编辑</a>
+</div>
+
+<div id="dlg_grade" class="easyui-dialog" title="学生信息表编辑" style="width: 400px; height: 400px; padding: 10px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_buttons'">
+    Loading...
+</div>
+
+<div id="dlg_buttons" style="padding:5px;height:auto">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="save()">保存</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="closeBox()">关闭</a>
+    </div>
+</div>
+
+
+<div id="dlg_selectClassAndStudents" class="easyui-dialog" title="编辑班级学生信息表" style="width: 1000px; height: 480px; padding: 5px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_buttons_ClassAndStudents'">
+</div>
+
+<div id="dlg_buttons_ClassAndStudents" style="padding:5px;height:auto">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="saveClassAndStudentsList()">确定</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="closeClassAndStudentsList()">关闭</a>
+    </div>
+</div>
+
+<script>
+    //生成表格
+    $('#grid_grade').datagrid({
+        url: '/Grade/query_grade',
+        rownumbers: true,
+        pagination: true,
+        toolbar: '#grid_gradetoolbar',
+        onClickRow: doDetail,
+        columns: [[
+            { field:'ck', checkbox:true},
+            {field:'SId', width:100, hidden:true,title:'SId'},
+            {field:'StudentId', width:100,title:'学生学号'},
+            {field: 'StudentName', width: 100, title:'学生姓名'},
+            {field: 'RId', width: 100, hidden: true, title:'所在班级编号'},
+            {field: 'Remo_id', width: 100,title:'所在班级'},
+            {field: 'SexName', width: 100, title:'性别'},
+            {field: 'Sex', width: 100, hidden: true,title:'性别'},
+            {field: 'Birthday', width: 100, formatter: formDate,title:'出生日期'},
+            {field: 'Email', width: 100,title:'电子邮件'},
+            { field: 'Hometown', width: 100, title: '户籍所在地' },
+            { field: 'AreaName', width: 100, title: '所在地域' },
+            {field: 'Phone_number', width: 100,title:'电话号码'},
+            { field: 'Other', width: 100,title:'地域编码'}
+        ]]
+    });
+
+
+
+
+
+    function formDate(value, row, index)
+    {
+        return Date.format(value, "yyyy年MM月dd日");
+    }
+
+    function doTurnToClassAndStudentChoose() {
+        $('#dlg_selectClassAndStudents').dialog("open").dialog('refresh', App.getUrl('/Grade/ClassAndStudentChoose'));
+    }
+
+    function doSearch() {
+        $('#grid_grade').datagrid('load', {
+            Key: 'StudentName?'+$('#Key').val()
+        });
+    }
+
+    // 添加
+    function doAdd() {
+        $('#dlg_grade').dialog("open").dialog('refresh', App.getUrl('/Grade/add'));
+    }
+
+    @*// 删除
+    function doDel() {
+        debugger;
+        var rows = $('#grid_grade').datagrid('getChecked');
+        if (!rows) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+
+        //获取庶删除的ID
+        var ids = new Array();
+        for (var i = 0; i < rows.length;i++)
+        {
+            ids.push(rows[i].SId);
+        }
+        bathremove
+        window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
+            function () {
+                App.action(App.getUrl("/Grade/remove"), { SId: row.SId },
+                function () {
+                    $('#grid_grade').datagrid('reload');
+                });
+        });
+
+
+    }*@
+
+
+    function searchSelect(value, name) {
+        $('#grid_grade').datagrid('load', {
+            Key: name+'?'+value
+        });
+    }
+
+
+        // 删除
+    function doDel() {
+        debugger;
+        var rows = $('#grid_grade').datagrid('getChecked');
+        if (!rows) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+
+        //获取要删除的ID
+        var ids = new Array();
+        for (var i = 0; i < rows.length;i++)
+        {
+            ids.push(rows[i].SId);
+        }
+
+        window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
+            function () {
+                App.action(App.getUrl("/Grade/bathremove"), ids,
+                function () {
+                    $('#grid_grade').datagrid('reload');
+                });
+        });
+
+
+    }
+
+    // 打开编辑状态详情
+    function doDetail(rowIndex, rowData) {
+            $('#dlg_grade').dialog("open").dialog('refresh', App.getUrl('/Grade/edit?SId=' + rowData.SId));
+    }
+</script>
+

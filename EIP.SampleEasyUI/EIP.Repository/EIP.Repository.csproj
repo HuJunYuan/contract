@@ -51,9 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ActualPaymentRepository.cs" />
     <Compile Include="AppCodeMasterRepository.cs" />
     <Compile Include="AppConfigRepository.cs" />
+    <Compile Include="ContractBasicInfoRepository.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RepaymentPlanRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EIP.Entity\EIP.Entity.csproj">

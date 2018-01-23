@@ -184,11 +184,14 @@
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\UnityConfig.cs" />
+    <Compile Include="Controllers\ActualPaymentController.cs" />
     <Compile Include="Controllers\AppCodeMasterController.cs" />
     <Compile Include="Controllers\AppConfigController.cs" />
+    <Compile Include="Controllers\ContractBasicInfoController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\IconSelectController.cs" />
+    <Compile Include="Controllers\RepaymentPlanController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -885,6 +888,15 @@
     <Content Include="Views\AppConfig\list.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
     <Content Include="Views\Home\form.cshtml" />
+    <Content Include="Views\ActualPayment\detail.cshtml" />
+    <Content Include="Views\ActualPayment\form.cshtml" />
+    <Content Include="Views\ActualPayment\list.cshtml" />
+    <Content Include="Views\ContractBasicInfo\detail.cshtml" />
+    <Content Include="Views\ContractBasicInfo\form.cshtml" />
+    <Content Include="Views\ContractBasicInfo\list.cshtml" />
+    <Content Include="Views\RepaymentPlan\detail.cshtml" />
+    <Content Include="Views\RepaymentPlan\form.cshtml" />
+    <Content Include="Views\RepaymentPlan\list.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
       <SubType>Designer</SubType>

@@ -1,0 +1,92 @@
+﻿
+@{
+    Layout = "~/views/shared/_layout.cshtml";
+}
+@section head{
+}
+
+<table id="grid_contractBasicInfo" class="easyui-datagrid" fit="true"
+       data-options="rownumbers:true,singleSelect:true,pagination:true,url:'query_contractBasicInfo',toolbar:'#grid_toolbar',onDblClickRow:doDetail">
+    <thead>
+        <tr>
+            <th data-options="field:'ck',checkbox:true"></th>
+            <th data-options="field:'EntryName',width:100">项目名称</th>
+            <th data-options="field:'Abbreviation',width:100">项目简称</th>
+            <th data-options="field:'ContractType',width:100">合同类型</th>
+            <th data-options="field:'CustomerName',width:100">顾客名字</th>
+            <th data-options="field:'ResponsibleDepartment',width:100">ResponsibleDepartment</th>
+            <th data-options="field:'ContractSigningDate',width:100">合同签订日期</th>
+            <th data-options="field:'ContractAmount',width:100">合同金额，单位：元</th>
+            <th data-options="field:'Scale',width:100">规模</th>
+            <th data-options="field:'StartTime',width:100">服务开始时间</th>
+            <th data-options="field:'EndTime',width:100">服务结束时间</th>
+            <th data-options="field:'BelongToYear',width:100">产值所属年</th>
+            <th data-options="field:'Remarks',width:100">备注</th>
+            <th data-options="field:'Other',width:100">冗余字段</th>
+            <th data-options="field:'ActualPayments',width:100">实际回款</th>
+            <th data-options="field:'RepaymentPlans',width:100">合同回款计划</th>
+
+        </tr>
+    </thead>
+</table>
+
+<div id="grid_toolbar" style="padding:5px;height:auto">
+    <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
+    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入记录项目的一些基本信息名。" })
+    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
+</div>
+
+<div id="dlg_contractBasicInfo" class="easyui-dialog" title="记录项目的一些基本信息编辑" style="width: 400px; height: 400px; padding: 10px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_buttons'">
+    Loading...
+</div>
+
+<div id="dlg_buttons" style="padding:5px;height:auto">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="save()">保存</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="closeBox()">关闭</a>
+    </div>
+</div>
+
+<script>
+    function doSearch() {
+        $('#grid_contractBasicInfo').datagrid('load', {
+            Key: $('#Key').val()
+        });
+    }
+
+    // 添加
+    function doAdd() {
+        $('#dlg_contractBasicInfo').dialog("open").dialog('refresh', App.getUrl('ContractBasicInfo/add'));
+    }
+
+    // 删除
+    function doDel() {
+        var row = $('#grid_contractBasicInfo').datagrid('getSelected');
+        if (!row) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+
+        window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
+            function () {
+                App.action(App.getUrl("ContractBasicInfo/remove"), { appId: row.AppId },
+                function () {
+                    $('#grid_contractBasicInfo').datagrid('reload');
+                });
+        });
+
+
+    }
+
+    // 打开编辑状态详情
+    function doDetail() {
+        var row = $('#grid_contractBasicInfo').datagrid('getSelected');
+        if (row) {
+            $('#dlg_contractBasicInfo').dialog("open").dialog('refresh', App.getUrl('ContractBasicInfo/edit?appId=' + row.AppId));
+        }
+
+    }
+</script>
+

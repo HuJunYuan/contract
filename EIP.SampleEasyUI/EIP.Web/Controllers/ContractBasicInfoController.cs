@@ -1,0 +1,147 @@
+﻿/*-----------------------------------------------------------------------------
+  版 本 号：V1.0 Copyright (c) Coreland.com.  All Rights Reserved.
+  创建时间：2018-01-23 12:46:37   创建人：Hujunyuan
+  修改时间：                     修改人：          修改内容：
+  描    述：
+-----------------------------------------------------------------------------*/
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using System.Web.Mvc.Html;
+
+using CoreLand.Framework;
+using CoreLand.Framework.Service;
+using CoreLand.Framework.Web;
+using EIP.Entity;
+using EIP.Model;
+using EIP.Service;
+
+namespace EIP.Web.Controllers
+{
+    public class ContractBasicInfoController : BaseController
+    {
+        /// <summary>
+        /// 记录项目的一些基本信息列表
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("list")]
+        public ActionResult List()
+        {
+            return View("~/views/contractbasicinfo/list.cshtml");
+        }
+
+        /// <summary>
+        /// 查询记录项目的一些基本信息列表
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("query_contractBasicInfo")]
+        public JsonResult QueryContractBasicInfo(QueryModel model)
+        {
+            var result = new QueryResultModel();
+            int totalCount = 0;
+
+            var contractBasicInfoService = this.GetService<IContractBasicInfoService>();
+            result.Data = contractBasicInfoService.QueryContractBasicInfo(model, out totalCount);
+            result.Total = totalCount;
+
+            return Json(result);
+        }
+
+        /// <summary>
+        /// 记录项目的一些基本信息新增视图
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("add")]
+        public ActionResult Add()
+        {
+            var entity = new ContractBasicInfo();
+            return View("~/views/contractbasicinfo/form.cshtml", entity);
+        }
+
+        /// <summary>
+        /// 记录项目的一些基本信息编辑视图
+        /// </summary>
+        /// <param name="contractGUID">合同基本信息标识</param>
+        /// <returns></returns>
+        [ActionName("edit")]
+        public ActionResult Edit(Guid contractGUID)
+        {
+            var entity = new ContractBasicInfo();
+
+            try
+            {
+                var contractBasicInfoService = this.GetService<IContractBasicInfoService>();
+                entity = contractBasicInfoService.Find<ContractBasicInfo>(contractGUID);
+
+            }
+            catch (CLApplicationException ex)
+            {
+                //修改时若发生异常则提示异常信息，并关闭修改界面
+                this.ShowAppErrorMessage(ex.Message, MessageFuncOption.CloseBrowserWindow);
+            }
+
+            return View("~/views/contractbasicinfo/form.cshtml", entity);
+        }
+
+        /// <summary>
+        /// 记录项目的一些基本信息编辑视图
+        /// </summary>
+        /// <param name="contractGUID">合同基本信息标识</param>
+        /// <returns></returns>
+        [ActionName("detail")]
+        public ActionResult Detail(Guid contractGUID)
+        {
+            var entity = new ContractBasicInfo();
+
+            try
+            {
+                var contractBasicInfoService = this.GetService<IContractBasicInfoService>();
+                entity = contractBasicInfoService.Find<ContractBasicInfo>(contractGUID);
+
+            }
+            catch (CLApplicationException ex)
+            {
+                //修改时若发生异常则提示异常信息，并关闭修改界面
+                this.ShowAppErrorMessage(ex.Message, MessageFuncOption.CloseBrowserWindow);
+            }
+
+            return View("~/views/contractbasicinfo/detail.cshtml", entity);
+        }
+
+        /// <summary>
+        /// 记录项目的一些基本信息保存数据操作
+        /// </summary>
+        /// <param name="model">记录项目的一些基本信息视图模型</param>
+        /// <returns></returns>
+        [ActionName("save")]
+        public JsonResult Save(ContractBasicInfo model)
+        {
+            var contractBasicInfoService = this.GetService<IContractBasicInfoService>();
+
+            if (contractBasicInfoService.SaveContractBasicInfo(model)!=null)
+            {
+                ShowMessage("I10010", MessageFuncOption.CloseBrowserWindow);
+            }
+            return Json(null);
+        }
+
+
+        /// <summary>
+        /// 删除记录项目的一些基本信息
+        /// </summary>
+        /// <param name="contractGUID">合同基本信息标识</param>
+        /// <returns>返回操作结果</returns>
+        [ActionName("remove")]
+        public JsonResult Remove(Guid contractGUID)
+        {
+            var contractBasicInfoService = this.GetService<IContractBasicInfoService>();
+
+            contractBasicInfoService.LogicDelete<ContractBasicInfo>(contractGUID);
+            ShowMessage("I10030");
+
+            return Json(null);
+        }
+    }
+}

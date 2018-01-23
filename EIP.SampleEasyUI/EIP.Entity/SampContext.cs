@@ -47,6 +47,22 @@ namespace EIP.Entity
 
         #region 业务实体模型定义
 
+        /// <summary>
+        /// 实际回款
+        ///</summary>
+        public DbSet<ActualPayment> ActualPayment { get; set; }
+
+
+        /// <summary>
+        /// 记录项目的一些基本信息
+        ///</summary>
+        public DbSet<ContractBasicInfo> ContractBasicInfo { get; set; }
+
+
+        /// <summary>
+        /// 合同回款计划
+        ///</summary>
+        public DbSet<RepaymentPlan> RepaymentPlan { get; set; }
 
         #endregion
 

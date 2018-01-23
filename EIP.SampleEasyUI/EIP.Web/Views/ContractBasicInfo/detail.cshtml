@@ -1,0 +1,192 @@
+﻿@model EIP.Entity.ContractBasicInfo
+
+@{
+    Layout = "~/views/shared/_PersonCenterLayout.cshtml";
+}
+@section head{
+    <link href="/Content/PersonalCenter/CSS/table.css?v=@ViewBag.Version" rel="stylesheet" />
+}
+<div>
+    <div class="div-margin">
+        <input type="button" id="Colse" class="form-btn" onclick="closeBox();" value="关闭" />
+        
+    </div>
+    <div class="head-font">
+        <b>记录项目的一些基本信息详情</b>
+    </div>
+
+    <table id="readonly" class="tables" cellpadding="0" cellspacing="0">
+            
+                <tr>
+                    <td width="25%">
+                        <label>合同基本信息标识</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.ContractGUID)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>项目名称</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.EntryName)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>项目简称</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Abbreviation)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>合同类型</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.ContractType)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>顾客名字</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.CustomerName)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>ResponsibleDepartment</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.ResponsibleDepartment)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>合同签订日期</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.ContractSigningDate)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>合同金额，单位：元</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.ContractAmount)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>规模</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Scale)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>服务开始时间</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.StartTime)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>服务结束时间</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.EndTime)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>产值所属年</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.BelongToYear)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>备注</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Remarks)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>冗余字段</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.Other)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>实际回款</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.ActualPayments)
+                    </td>
+                </tr>
+            
+            
+                <tr>
+                    <td width="25%">
+                        <label>合同回款计划</label>
+                    </td>
+                    <td>
+                        @Html.DisplayFor(p => p.RepaymentPlans)
+                    </td>
+                </tr>
+            
+    </table>
+</div>
+
+<script type="text/javascript">
+
+    mini.parse();
+
+
+    //关闭
+    function closeBox() {
+
+        window.App.CloseWindow();
+    }
+</script>

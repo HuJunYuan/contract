@@ -71,6 +71,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonConstant.cs" />
+    <Compile Include="dbo\ActualPayment.cs" />
+    <Compile Include="dbo\ContractBasicInfo.cs" />
+    <Compile Include="dbo\RepaymentPlan.cs" />
     <Compile Include="pub\AppCodeMaster.cs" />
     <Compile Include="pub\AppConfig.cs" />
     <Compile Include="pub\AppConfig.partial.cs" />
@@ -82,7 +85,6 @@
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="dbo\" />
     <Folder Include="enums\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

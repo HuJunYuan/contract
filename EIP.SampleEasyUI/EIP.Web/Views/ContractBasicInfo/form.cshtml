@@ -1,0 +1,124 @@
+﻿@model EIP.Entity.ContractBasicInfo
+
+@{
+    Layout = null;
+}
+@section head{
+}
+<form id="form_ContractBasicInfo" class="easyui-form" method="post" data-options="">
+        
+            <!--合同基本信息标识-->
+            @Html.HiddenFor(p => p.ContractGUID)    
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.EntryName, new TextBox() { Label = "项目名称 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.Abbreviation, new TextBox() { Label = "项目简称 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.ContractType, new TextBox() { Label = "合同类型 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.CustomerName, new TextBox() { Label = "顾客名字 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.ResponsibleDepartment, new TextBox() { Label = "ResponsibleDepartment ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLDatetimeBoxFor(p => p.ContractSigningDate, new DatetimeBox() { Label = "合同签订日期 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.ContractAmount, new TextBox() { Label = "合同金额，单位：元 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.Scale, new TextBox() { Label = "规模 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLDatetimeBoxFor(p => p.StartTime, new DatetimeBox() { Label = "服务开始时间 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLDatetimeBoxFor(p => p.EndTime, new DatetimeBox() { Label = "服务结束时间 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.BelongToYear, new TextBox() { Label = "产值所属年 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.Remarks, new TextBox() { Label = "备注 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.Other, new TextBox() { Label = "冗余字段 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.ActualPayments, new TextBox() { Label = "实际回款 ：", Style = "width:90%;" })
+            </div>
+
+        
+            <div class="form-item">
+                    @Html.CLTextBoxFor(p => p.RepaymentPlans, new TextBox() { Label = "合同回款计划 ：", Style = "width:90%;" })
+            </div>
+
+</form>
+<script type="text/javascript">
+
+    function validate() {
+        // 验证
+        var isValid = $("#form_ContractBasicInfo").form("validate");
+        if (!isValid) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+        return true;
+    }
+
+    //保存
+    function save() {
+
+        // 表单验证
+        if (!validate()) return;
+
+        // 表单数据提交
+        var formData = $("#form_ContractBasicInfo").form("getData");
+        App.action(App.getUrl("ContractBasicInfo/save"), formData,
+            function (data) {
+                //todo
+            });
+
+    }
+
+    //关闭
+    function closeBox() {
+
+        window.App.showConfirm('@MessageManager.GetMessage("Q10030")',
+            function () {
+                window.App.CloseWindow();
+            });
+    }
+</script>

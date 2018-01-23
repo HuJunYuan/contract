@@ -72,10 +72,16 @@
     <Compile Include="AutoMapper\Profiles\BaseProfile.cs" />
     <Compile Include="AutoMapper\Profiles\CodeMasterProfile.cs" />
     <Compile Include="AutoMapper\Profiles\StudentProfile.cs" />
+    <Compile Include="IActualPaymentService.cs" />
     <Compile Include="IAppCodeMasterService.cs" />
     <Compile Include="IAppConfigService.cs" />
+    <Compile Include="IContractBasicInfoService.cs" />
+    <Compile Include="Impl\ActualPaymentService.cs" />
     <Compile Include="Impl\AppCodeMasterService.cs" />
     <Compile Include="Impl\AppConfigService.cs" />
+    <Compile Include="Impl\ContractBasicInfoService.cs" />
+    <Compile Include="Impl\RepaymentPlanService.cs" />
+    <Compile Include="IRepaymentPlanService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

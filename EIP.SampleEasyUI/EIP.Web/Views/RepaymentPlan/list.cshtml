@@ -1,0 +1,83 @@
+﻿
+@{
+    Layout = "~/views/shared/_layout.cshtml";
+}
+@section head{
+}
+
+<table id="grid_repaymentPlan" class="easyui-datagrid" fit="true"
+       data-options="rownumbers:true,singleSelect:true,pagination:true,url:'query_repaymentPlan',toolbar:'#grid_toolbar',onDblClickRow:doDetail">
+    <thead>
+        <tr>
+            <th data-options="field:'ck',checkbox:true"></th>
+            <th data-options="field:'ContractGUID',width:100">合同基本信息标识</th>
+            <th data-options="field:'RepaymentPlanDate',width:100">回款计划时间</th>
+            <th data-options="field:'RepaymentPlanAmount',width:100">回款计划金额</th>
+            <th data-options="field:'Remarks',width:100">备注</th>
+            <th data-options="field:'Other',width:100">冗余字段</th>
+            <th data-options="field:'ContractBasicInfo',width:100">记录项目的一些基本信息</th>
+
+        </tr>
+    </thead>
+</table>
+
+<div id="grid_toolbar" style="padding:5px;height:auto">
+    <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
+    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入合同回款计划名。" })
+    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
+</div>
+
+<div id="dlg_repaymentPlan" class="easyui-dialog" title="合同回款计划编辑" style="width: 400px; height: 400px; padding: 10px"
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_buttons'">
+    Loading...
+</div>
+
+<div id="dlg_buttons" style="padding:5px;height:auto">
+    <div style="margin-bottom:5px">
+        <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="save()">保存</a>
+        <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="closeBox()">关闭</a>
+    </div>
+</div>
+
+<script>
+    function doSearch() {
+        $('#grid_repaymentPlan').datagrid('load', {
+            Key: $('#Key').val()
+        });
+    }
+
+    // 添加
+    function doAdd() {
+        $('#dlg_repaymentPlan').dialog("open").dialog('refresh', App.getUrl('RepaymentPlan/add'));
+    }
+
+    // 删除
+    function doDel() {
+        var row = $('#grid_repaymentPlan').datagrid('getSelected');
+        if (!row) {
+            App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
+            return false;
+        }
+
+        window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
+            function () {
+                App.action(App.getUrl("RepaymentPlan/remove"), { appId: row.AppId },
+                function () {
+                    $('#grid_repaymentPlan').datagrid('reload');
+                });
+        });
+
+
+    }
+
+    // 打开编辑状态详情
+    function doDetail() {
+        var row = $('#grid_repaymentPlan').datagrid('getSelected');
+        if (row) {
+            $('#dlg_repaymentPlan').dialog("open").dialog('refresh', App.getUrl('RepaymentPlan/edit?appId=' + row.AppId));
+        }
+
+    }
+</script>
+

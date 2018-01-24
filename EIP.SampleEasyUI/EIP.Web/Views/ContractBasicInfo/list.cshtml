@@ -7,8 +7,8 @@
 <body class="easyui-layout">
 
     <div data-options="region:'south',title:'回款信息',split:true" style="height:200px;">
-        <div id="receiveMoney" style="width:50%; float:left;background:lightblue;height:100%;">test1</div>
-        <div id="receiveMoneyPlan" style="width:50%;float:left;background:lightyellow;height:100%;">test2</div>
+        <div style="width:50%; float:left;background:lightblue;height:100%;"> <div id="receiveMoney" class="easyui-panel">test1</div></div>
+        <div style="width:50%;float:left;background:lightyellow;height:100%;"><div id="receiveMoneyPlan" class="easyui-panel">test2</div></div>
     </div>
     <div id="east" data-options="region:'east',title:'工具'" style="width:180px;">
             <p> <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAddNewContract()">添加新合同信息</a>      </p>
@@ -43,7 +43,6 @@
 <script>
     //生成合同数据表
     $("#grid_contractBasicInfo").datagrid({
-        view:detailview,
         title: '合同信息表',
         rownumbers: true,
         singleSelect: true,
@@ -68,35 +67,12 @@
             { field: 'BelongToYear', title: '产值所属年', width: 100 },
             { field: 'ActualPayments', title: '实际回款金额', width: 100 },
             { field: 'Remarks', title: '备注', width: 100 },
-        ]],
-        detailFormatter: function (index, row) {
-            return '<div style="padding:2px"><table id="ddv-' + index + '"></table></div>'
-        },
-        onExpandRow: function (index, row) {
-            $('#ddv-' + index).datagrid({
-                //url: '/ActualPayment/list',
-                fitColumns: true,
-                singleSelect: true,
-                height: 'auto',
-                columns: [[
-                    { field: 'Remarks', title: '备注', width: 100 },
-                ]],
-                onResize: function () {
-                    $('#grid_contractBasicInfo').datagrid('fixDetailRowHeight', index);
-                },
-                onLoadSuccess: function () {
-                    setTimeout(function () {
-                        $('#grid_contractBasicInfo').datagrid('fixDetailRowHeight', index);
-                    }, 0);
-                }
-            });
-            $('#grid_contractBasicInfo').datagrid('fixDetailRowHeight', index);
-        }
+        ]]
     });
     //加载回款项
     function doOpenReceiveMoney() {
-        //$("#receiveMoney").load('/ActualPayment/list');
-        //$("#receiveMoneyPlan").load('/RepaymentPlan/list');
+        $("#receiveMoney").panel('refresh', '/ActualPayment/list');
+        $("#receiveMoneyPlan").panel('refresh', '/RepaymentPlan/list');
 
     }
     //搜索

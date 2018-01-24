@@ -10,12 +10,13 @@
     <thead>
         <tr>
             <th data-options="field:'ck',checkbox:true"></th>
-            <th data-options="field:'ContractGUID',width:100">合同基本信息标识</th>
-            <th data-options="field:'RepaymentPlanDate',width:100">回款计划时间</th>
+            
+            <th data-options="field:'RepaymentPlantGUID',width:100,hidden:true">回款计划标识</th>
+            <th data-options="field:'ContractGUID',width:100,hidden:true">合同基本信息标识</th>
+            <th data-options="field:'RepaymentPlanDate',width:150">回款计划时间</th>
             <th data-options="field:'RepaymentPlanAmount',width:100">回款计划金额</th>
-            <th data-options="field:'Remarks',width:100">备注</th>
-            <th data-options="field:'Other',width:100">冗余字段</th>
-            <th data-options="field:'ContractBasicInfo',width:100">记录项目的一些基本信息</th>
+            <th data-options="field:'Remarks',width:100,hidden:true">备注</th>
+            <th data-options="field:'Other',width:100,hidden:true">冗余字段</th>
 
         </tr>
     </thead>

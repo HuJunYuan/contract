@@ -58,6 +58,9 @@ namespace EIP.Repository
 
             return repaymentPlans;
         }
-
+        public List<RepaymentPlan> QueryRepaymentPlanByContractGuid(Guid ContractGUID)
+        {
+            return this.GetEntity().Where(p => p.LogicDeleteFlag == false && p.ContractGUID == ContractGUID).ToList();
+        }
     }
 }

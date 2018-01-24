@@ -95,10 +95,19 @@ namespace EIP.Service
 
             return model.RepaymentPlantGUID;
         }
-		#endregion
+        #endregion
 
         #region private method
-
-		#endregion
+        /// <summary>
+        /// 处理实际回款
+        /// 通过合同Guid ContractGUID获取对应的数据
+        /// </summary>
+        /// <param name="ContractGUID">合同GUID</param>
+        /// <returns>所有属于该合同的计划回款信息</returns>
+        public List<RepaymentPlan> QueryRepaymentPlanByContractGuid(Guid ContractGUID)
+        {
+            return repaymentPlanRepository.QueryRepaymentPlanByContractGuid(ContractGUID);
+        }
+        #endregion
     }
 }

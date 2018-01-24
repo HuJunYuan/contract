@@ -27,8 +27,9 @@ namespace EIP.Web.Controllers
         /// </summary>
         /// <returns></returns>
         [ActionName("list")]
-        public ActionResult List()
+        public ActionResult List(Guid ContractGUID)
         {
+            ViewBag.contractGuid = ContractGUID;
             return View("~/views/actualpayment/list.cshtml");
         }
 
@@ -58,6 +59,22 @@ namespace EIP.Web.Controllers
         {
             var entity = new ActualPayment();
             return View("~/views/actualpayment/form.cshtml", entity);
+        }
+        
+
+        /// <summary>
+        /// 获取指定合同的实际回款信息
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("loadPanel")]
+        public JsonResult loadPanel(Guid ContractGUID)
+        {
+            var result = new QueryResultModel();
+            int totalcount = 0;
+            var actualPaymentService = this.GetService<IActualPaymentService>();
+            result.Data = actualPaymentService.QueryActualPaymentByContractGuid(ContractGUID);
+            result.Total = totalcount;
+            return Json(result);
         }
 
         /// <summary>

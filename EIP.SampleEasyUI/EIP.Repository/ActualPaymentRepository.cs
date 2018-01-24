@@ -59,5 +59,9 @@ namespace EIP.Repository
             return actualPayments;
         }
 
+        //通过合同ID查询实际回款信息
+        public List<ActualPayment> QueryActualPaymentByContractGuid(Guid ContractGUID) {
+            return this.GetEntity().Where(p => p.LogicDeleteFlag == false && p.ContractGUID == ContractGUID).ToList();
+        }
     }
 }

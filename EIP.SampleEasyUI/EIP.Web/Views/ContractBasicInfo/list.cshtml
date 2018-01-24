@@ -7,32 +7,39 @@
 <body class="easyui-layout">
 
     <div data-options="region:'south',title:'回款信息',split:true" style="height:200px;">
-        <div style="width:50%; float:left;background:lightblue;height:100%;"> <div id="receiveMoney" class="easyui-panel">test1</div></div>
+        <div style="width:50%; float:left;background:lightblue;height:100%;"> <div id="receiveMoney" class="easyui-panel" >test1</div></div>
         <div style="width:50%;float:left;background:lightyellow;height:100%;"><div id="receiveMoneyPlan" class="easyui-panel">test2</div></div>
     </div>
+
+    @*右边工具栏*@
     <div id="east" data-options="region:'east',title:'工具'" style="width:180px;">
-            <p> <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAddNewContract()">添加新合同信息</a>      </p>
-            <p> <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDelContract()">删除选中的合同信息</a>   </p>
-            <p>
-                @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入", Style = "width:95%;" })
-            </p>
-            <p>
-                <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearchContract()">查询</a>
-            </p>
-        </div>
+        <p> <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAddNewContract()">添加新合同信息</a> </p>
+        <p> <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDelContract()">删除选中的合同信息</a> </p>
+        <p>
+            @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入", Style = "width:95%;" })
+        </p>
+        <p>
+            <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearchContract()">查询</a>
+        </p>
+    </div>
+
+
     <div data-options="region:'center',title:'合同信息'" style="padding:5px;background:#eee;">
         <table id="grid_contractBasicInfo"> </table>
     </div>
+
 </body>
 
 
 
-
+@*合同信息编辑页面*@
 <div id="dlg_contractBasicInfo" class="easyui-dialog" title="记录项目的一些基本信息编辑" style="width: 400px; height: 400px; padding: 10px"
      data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_ContractBasicInfobuttons'">
     Loading...
 </div>
 
+
+@*信息编辑页面工具框*@
 <div id="dlg_ContractBasicInfobuttons" style="padding:5px;height:auto">
     <div style="margin-bottom:5px">
         <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="save()">保存</a>
@@ -69,12 +76,21 @@
             { field: 'Remarks', title: '备注', width: 100 },
         ]]
     });
+
     //加载回款项
     function doOpenReceiveMoney() {
-        $("#receiveMoney").panel('refresh', '/ActualPayment/list');
-        $("#receiveMoneyPlan").panel('refresh', '/RepaymentPlan/list');
+        alert("hello");
+       var row = $('#grid_contractBasicInfo').datagrid('getSelected');
+        alert("2");
+       $("#receiveMoney").panel("refresh", '/ActualPayment/list?ContractGUID=' + row.ContractGUID);
+        alert("3");
+        $("#receiveMoneyPlan").panel('refresh', '/RepaymentPlan/list?ContractGUID=' + row.ContractGUID);
+        alert("4");
+       
 
     }
+
+
     //搜索
     function doSearchContract() {
         $('#grid_contractBasicInfo').datagrid('load', {

@@ -36,5 +36,13 @@ namespace EIP.Service
         /// <param name="model">实际回款信息</param>
         /// <returns>处理是否成功</returns>
         Guid SaveActualPayment(ActualPayment model);
+
+        /// <summary>
+        /// 处理实际回款
+        /// 通过合同Guid ContractGUID获取对应的数据
+        /// </summary>
+        /// <param name="ContractGUID">合同GUID</param>
+        /// <returns>所有属于该合同的实际回款信息</returns>
+        List<ActualPayment> QueryActualPaymentByContractGuid(Guid ContractGUID);
     }
 }

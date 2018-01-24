@@ -27,8 +27,9 @@ namespace EIP.Web.Controllers
         /// </summary>
         /// <returns></returns>
         [ActionName("list")]
-        public ActionResult List()
+        public ActionResult List(Guid ContractGUID)
         {
+            ViewBag.contractGUID = ContractGUID;
             return View("~/views/repaymentplan/list.cshtml");
         }
 
@@ -44,6 +45,24 @@ namespace EIP.Web.Controllers
 
             var repaymentPlanService = this.GetService<IRepaymentPlanService>();
             result.Data = repaymentPlanService.QueryRepaymentPlan(model, out totalCount);
+            result.Total = totalCount;
+
+            return Json(result);
+        }
+
+
+        /// <summary>
+        /// 通过合同GUID查询合同回款计划列表
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("loadListByGuid")]
+        public JsonResult loadListByGuid(Guid ContractGUID)
+        {
+            var result = new QueryResultModel();
+            int totalCount = 0;
+
+            var repaymentPlanService = this.GetService<IRepaymentPlanService>();
+            result.Data = repaymentPlanService.QueryRepaymentPlanByContractGuid(ContractGUID);
             result.Total = totalCount;
 
             return Json(result);

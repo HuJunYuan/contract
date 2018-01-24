@@ -6,7 +6,7 @@
 }
 
 <table id="grid_actualPayment" class="easyui-datagrid" fit="true"
-       data-options="rownumbers:true,singleSelect:true,url:'query_actualPayment',toolbar:'#grid_ActualPaymenttoolbar',onDblClickRow:doDetailActualPaymenttool">
+       data-options="rownumbers:true,singleSelect:true,url:'/ActualPayment/loadPanel?ContractGUID=@ViewBag.contractGuid',toolbar:'#grid_ActualPaymenttoolbar',onDblClickRow:doDetailActualPaymenttool">
     <thead>
         <tr>
             <th data-options="field:'ck',checkbox:true"></th>

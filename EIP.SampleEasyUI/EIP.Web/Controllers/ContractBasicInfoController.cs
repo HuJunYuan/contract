@@ -66,20 +66,20 @@ namespace EIP.Web.Controllers
         /// <param name="contractGUID">合同基本信息标识</param>
         /// <returns></returns>
         [ActionName("edit")]
-        public ActionResult Edit(Guid contractGUID)
+        public ActionResult Edit(Guid ContractGUID)
         {
             var entity = new ContractBasicInfo();
 
             try
             {
                 var contractBasicInfoService = this.GetService<IContractBasicInfoService>();
-                entity = contractBasicInfoService.Find<ContractBasicInfo>(contractGUID);
+                entity = contractBasicInfoService.Find<ContractBasicInfo>(ContractGUID);
 
             }
             catch (CLApplicationException ex)
             {
                 //修改时若发生异常则提示异常信息，并关闭修改界面
-                this.ShowAppErrorMessage(ex.Message, MessageFuncOption.CloseBrowserWindow);
+                this.ShowAppErrorMessage(ex.Message);
             }
 
             return View("~/views/contractbasicinfo/form.cshtml", entity);
@@ -104,7 +104,7 @@ namespace EIP.Web.Controllers
             catch (CLApplicationException ex)
             {
                 //修改时若发生异常则提示异常信息，并关闭修改界面
-                this.ShowAppErrorMessage(ex.Message, MessageFuncOption.CloseBrowserWindow);
+                this.ShowAppErrorMessage(ex.Message);
             }
 
             return View("~/views/contractbasicinfo/detail.cshtml", entity);
@@ -122,7 +122,7 @@ namespace EIP.Web.Controllers
 
             if (contractBasicInfoService.SaveContractBasicInfo(model)!=null)
             {
-                ShowMessage("I10010", MessageFuncOption.CloseBrowserWindow);
+                ShowMessage("I10010");
             }
             return Json(null);
         }

@@ -42,10 +42,10 @@ namespace EIP.Repository
         {
             //查询数据
             var searchKey = (string.IsNullOrEmpty(model.Key) ? "%" : "%" + model.Key.Trim() + "%");
-            string sql = "select * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and TODO like @p0 ";
+            string sql = "select * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like @p0 ";
 
             //分页查询必须要有排序字段
-            model.SortField = string.IsNullOrEmpty(model.SortField) ? "TODO" : model.SortField;
+            model.SortField = string.IsNullOrEmpty(model.SortField) ? "ContractGUID" : model.SortField;
 
             var contractBasicInfos = this.LoadPageEntitiesBySql<ContractBasicInfo>(
                        model.PageIndex,

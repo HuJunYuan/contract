@@ -4,45 +4,36 @@
 }
 @section head{
 }
+<body class="easyui-layout">
 
-<table id="grid_contractBasicInfo" class="easyui-datagrid" fit="true"
-       data-options="rownumbers:true,singleSelect:true,pagination:true,url:'query_contractBasicInfo',toolbar:'#grid_toolbar',onDblClickRow:doDetail">
-    <thead>
-        <tr>
-            <th data-options="field:'ck',checkbox:true"></th>
-            <th data-options="field:'EntryName',width:100">项目名称</th>
-            <th data-options="field:'Abbreviation',width:100">项目简称</th>
-            <th data-options="field:'ContractType',width:100">合同类型</th>
-            <th data-options="field:'CustomerName',width:100">顾客名字</th>
-            <th data-options="field:'ResponsibleDepartment',width:100">ResponsibleDepartment</th>
-            <th data-options="field:'ContractSigningDate',width:100">合同签订日期</th>
-            <th data-options="field:'ContractAmount',width:100">合同金额，单位：元</th>
-            <th data-options="field:'Scale',width:100">规模</th>
-            <th data-options="field:'StartTime',width:100">服务开始时间</th>
-            <th data-options="field:'EndTime',width:100">服务结束时间</th>
-            <th data-options="field:'BelongToYear',width:100">产值所属年</th>
-            <th data-options="field:'Remarks',width:100">备注</th>
-            <th data-options="field:'Other',width:100">冗余字段</th>
-            <th data-options="field:'ActualPayments',width:100">实际回款</th>
-            <th data-options="field:'RepaymentPlans',width:100">合同回款计划</th>
+    <div data-options="region:'south',title:'回款信息',split:true" style="height:200px;">
+        <div id="receiveMoney" style="width:50%; float:left;background:lightblue;height:100%;">test1</div>
+        <div id="receiveMoneyPlan" style="width:50%;float:left;background:lightyellow;height:100%;">test2</div>
+    </div>
+    <div id="east" data-options="region:'east',title:'工具'" style="width:180px;">
+            <p> <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAddNewContract()">添加新合同信息</a>      </p>
+            <p> <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDelContract()">删除选中的合同信息</a>   </p>
+            <p>
+                @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入", Style = "width:95%;" })
+            </p>
+            <p>
+                <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearchContract()">查询</a>
+            </p>
+        </div>
+    <div data-options="region:'center',title:'合同信息'" style="padding:5px;background:#eee;">
+        <table id="grid_contractBasicInfo"> </table>
+    </div>
+</body>
 
-        </tr>
-    </thead>
-</table>
 
-<div id="grid_toolbar" style="padding:5px;height:auto">
-    <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAdd()">添加</a>
-    <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDel()">删除</a>
-    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入记录项目的一些基本信息名。" })
-    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearch()">查询</a>
-</div>
+
 
 <div id="dlg_contractBasicInfo" class="easyui-dialog" title="记录项目的一些基本信息编辑" style="width: 400px; height: 400px; padding: 10px"
-     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_buttons'">
+     data-options="iconCls:'icon-save',resizable:true,modal:true,closed:true,buttons:'#dlg_ContractBasicInfobuttons'">
     Loading...
 </div>
 
-<div id="dlg_buttons" style="padding:5px;height:auto">
+<div id="dlg_ContractBasicInfobuttons" style="padding:5px;height:auto">
     <div style="margin-bottom:5px">
         <a href="#" class="easyui-linkbutton" iconcls="icon-save" plain="true" onclick="save()">保存</a>
         <a href="#" class="easyui-linkbutton" iconcls="icon-no" plain="true" onclick="closeBox()">关闭</a>
@@ -50,41 +41,97 @@
 </div>
 
 <script>
-    function doSearch() {
+    //生成合同数据表
+    $("#grid_contractBasicInfo").datagrid({
+        view:detailview,
+        title: '合同信息表',
+        rownumbers: true,
+        singleSelect: true,
+        pagination: true,
+        fit: true,
+        url: 'query_contractBasicInfo',
+        onClickRow:doOpenReceiveMoney,
+        onDblClickRow: doDetailContract,
+        columns: [[
+            { field: 'ck', checkbox: 'true', width: 100 },
+            { field: 'ContractGUID', title: '项目GUID', hidden: true, width: 100 },
+            { field: 'EntryName', title: '项目名称', width: 100 },
+            { field: 'Abbreviation', title: '项目简称', width: 100},
+            { field: 'ContractType', title: '合同类型', width: 100},
+            { field: 'CustomerName', title: '顾客名字', width: 100},
+            { field: 'ResponsibleDepartment', title: '甲方负责部门', width: 100},
+            { field: 'ContractSigningDate', title: '合同签订日期', width: 100, align: 'center' },
+            { field: 'ResponsibleDepartment', title: '合同金额，单位：元', width: 100 },
+            { field: 'Scale', title: '规模', width: 100 },
+            { field: 'StartTime', title: '服务开始时间', width: 100 },
+            { field: 'EndTime', title: '服务结束时间', width: 100 },
+            { field: 'BelongToYear', title: '产值所属年', width: 100 },
+            { field: 'ActualPayments', title: '实际回款金额', width: 100 },
+            { field: 'Remarks', title: '备注', width: 100 },
+        ]],
+        detailFormatter: function (index, row) {
+            return '<div style="padding:2px"><table id="ddv-' + index + '"></table></div>'
+        },
+        onExpandRow: function (index, row) {
+            $('#ddv-' + index).datagrid({
+                //url: '/ActualPayment/list',
+                fitColumns: true,
+                singleSelect: true,
+                height: 'auto',
+                columns: [[
+                    { field: 'Remarks', title: '备注', width: 100 },
+                ]],
+                onResize: function () {
+                    $('#grid_contractBasicInfo').datagrid('fixDetailRowHeight', index);
+                },
+                onLoadSuccess: function () {
+                    setTimeout(function () {
+                        $('#grid_contractBasicInfo').datagrid('fixDetailRowHeight', index);
+                    }, 0);
+                }
+            });
+            $('#grid_contractBasicInfo').datagrid('fixDetailRowHeight', index);
+        }
+    });
+    //加载回款项
+    function doOpenReceiveMoney() {
+        //$("#receiveMoney").load('/ActualPayment/list');
+        //$("#receiveMoneyPlan").load('/RepaymentPlan/list');
+
+    }
+    //搜索
+    function doSearchContract() {
         $('#grid_contractBasicInfo').datagrid('load', {
             Key: $('#Key').val()
         });
     }
 
     // 添加
-    function doAdd() {
-        $('#dlg_contractBasicInfo').dialog("open").dialog('refresh', App.getUrl('ContractBasicInfo/add'));
+    function doAddNewContract() {
+        $('#dlg_contractBasicInfo').dialog("open").dialog('refresh', App.getUrl('/ContractBasicInfo/add'));
     }
 
     // 删除
-    function doDel() {
+    function doDelContract() {
         var row = $('#grid_contractBasicInfo').datagrid('getSelected');
         if (!row) {
             App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
             return false;
         }
-
         window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
             function () {
-                App.action(App.getUrl("ContractBasicInfo/remove"), { appId: row.AppId },
+                App.action(App.getUrl("/ContractBasicInfo/remove"), { ContractGUID: row.ContractGUID },
                 function () {
                     $('#grid_contractBasicInfo').datagrid('reload');
                 });
         });
-
-
     }
 
     // 打开编辑状态详情
-    function doDetail() {
+    function doDetailContract() {
         var row = $('#grid_contractBasicInfo').datagrid('getSelected');
         if (row) {
-            $('#dlg_contractBasicInfo').dialog("open").dialog('refresh', App.getUrl('ContractBasicInfo/edit?appId=' + row.AppId));
+            $('#dlg_contractBasicInfo').dialog("open").dialog('refresh', App.getUrl('/ContractBasicInfo/edit?ContractGUID=' + row.ContractGUID));
         }
 
     }

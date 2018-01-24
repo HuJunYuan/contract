@@ -59,7 +59,7 @@
 
         // 表单数据提交
         var formData = $("#form_ActualPayment").form("getData");
-        App.action(App.getUrl("ActualPayment/save"), formData,
+        App.action(App.getUrl("/ActualPayment/save"), formData,
             function (data) {
                 //todo
             });

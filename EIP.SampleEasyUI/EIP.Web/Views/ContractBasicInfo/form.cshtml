@@ -32,7 +32,7 @@
 
         
             <div class="form-item">
-                    @Html.CLTextBoxFor(p => p.ResponsibleDepartment, new TextBox() { Label = "ResponsibleDepartment ：", Style = "width:90%;" })
+                    @Html.CLTextBoxFor(p => p.ResponsibleDepartment, new TextBox() { Label = "甲方负责部门 ：", Style = "width:90%;" })
             </div>
 
         
@@ -70,20 +70,6 @@
                     @Html.CLTextBoxFor(p => p.Remarks, new TextBox() { Label = "备注 ：", Style = "width:90%;" })
             </div>
 
-        
-            <div class="form-item">
-                    @Html.CLTextBoxFor(p => p.Other, new TextBox() { Label = "冗余字段 ：", Style = "width:90%;" })
-            </div>
-
-        
-            <div class="form-item">
-                    @Html.CLTextBoxFor(p => p.ActualPayments, new TextBox() { Label = "实际回款 ：", Style = "width:90%;" })
-            </div>
-
-        
-            <div class="form-item">
-                    @Html.CLTextBoxFor(p => p.RepaymentPlans, new TextBox() { Label = "合同回款计划 ：", Style = "width:90%;" })
-            </div>
 
 </form>
 <script type="text/javascript">
@@ -106,7 +92,7 @@
 
         // 表单数据提交
         var formData = $("#form_ContractBasicInfo").form("getData");
-        App.action(App.getUrl("ContractBasicInfo/save"), formData,
+        App.action(App.getUrl("/ContractBasicInfo/save"), formData,
             function (data) {
                 //todo
             });

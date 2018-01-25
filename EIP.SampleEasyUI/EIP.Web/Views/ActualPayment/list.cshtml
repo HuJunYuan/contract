@@ -12,7 +12,7 @@
             <th data-options="field:'ck',checkbox:true"></th>
             
             <th data-options="field:'ActualPaymentGUID',hidden:true,width:100">ActualPaymentGUID</th>
-            <th data-options="field:'ContractGUID',width:100,hidden:true">合同基本信息标识</th>
+            <th data-options="field:'ContractGUID',width:100">合同基本信息标识</th>
             <th data-options="field:'ActualPaymentDate',width:150">实际回款时间</th>
             <th data-options="field:'ActualPaymentAmount',width:100">实际回款金额</th>
             <th data-options="field:'Remarks',width:100,hidden:true">备注</th>
@@ -63,7 +63,7 @@
 
         window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
             function () {
-                App.action(App.getUrl("/ActualPayment/remove"), { actualPaymentGUID: row.actualPaymentGUID},
+                App.action(App.getUrl("/ActualPayment/remove"), { ActualPaymentGUID: row.ActualPaymentGUID},
                 function () {
                     $('#grid_actualPayment').datagrid('reload');
                 });
@@ -76,7 +76,7 @@
     function doDetailActualPaymenttool() {
         var row = $('#grid_actualPayment').datagrid('getSelected');
         if (row) {
-            $('#dlg_actualPayment').dialog("open").dialog('refresh', App.getUrl('/ActualPayment/edit?actualPaymentGUID=' + row.actualPaymentGUID));
+            $('#dlg_actualPayment').dialog("open").dialog('refresh', App.getUrl('/ActualPayment/edit?ActualPaymentGUID=' + row.ActualPaymentGUID));
         }
 
     }

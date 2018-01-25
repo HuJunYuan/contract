@@ -83,8 +83,9 @@ namespace EIP.Service
             if (entity != null)
             {
                 //更新数据
-                //entity = Mapper.Map<ActualPayment, ActualPayment>(model, entity);
+                entity = Mapper.Map<ActualPayment, ActualPayment>(model, entity);
                 this.actualPaymentRepository.Update(entity);
+                this.ServiceContext.Commit();
             }
             else
             {

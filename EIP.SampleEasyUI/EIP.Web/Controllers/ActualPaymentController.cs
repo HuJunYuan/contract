@@ -83,14 +83,14 @@ namespace EIP.Web.Controllers
         /// <param name="actualPaymentGUID">实际回款标识串</param>
         /// <returns></returns>
         [ActionName("edit")]
-        public ActionResult Edit(Guid actualPaymentGUID)
+        public ActionResult Edit(Guid ActualPaymentGUID)
         {
             var entity = new ActualPayment();
 
             try
             {
                 var actualPaymentService = this.GetService<IActualPaymentService>();
-                entity = actualPaymentService.Find<ActualPayment>(actualPaymentGUID);
+                entity = actualPaymentService.Find<ActualPayment>(ActualPaymentGUID);
 
             }
             catch (CLApplicationException ex)
@@ -108,14 +108,14 @@ namespace EIP.Web.Controllers
         /// <param name="actualPaymentGUID">实际回款标识串</param>
         /// <returns></returns>
         [ActionName("detail")]
-        public ActionResult Detail(Guid actualPaymentGUID)
+        public ActionResult Detail(Guid ActualPaymentGUID)
         {
             var entity = new ActualPayment();
 
             try
             {
                 var actualPaymentService = this.GetService<IActualPaymentService>();
-                entity = actualPaymentService.Find<ActualPayment>(actualPaymentGUID);
+                entity = actualPaymentService.Find<ActualPayment>(ActualPaymentGUID);
 
             }
             catch (CLApplicationException ex)
@@ -139,7 +139,7 @@ namespace EIP.Web.Controllers
 
             if (actualPaymentService.SaveActualPayment(model)!=null)
             {
-                ShowMessage("I10010", MessageFuncOption.CloseBrowserWindow);
+                ShowMessage("I10010");
             }
             return Json(null);
         }
@@ -151,11 +151,11 @@ namespace EIP.Web.Controllers
         /// <param name="actualPaymentGUID">实际回款标识串</param>
         /// <returns>返回操作结果</returns>
         [ActionName("remove")]
-        public JsonResult Remove(Guid actualPaymentGUID)
+        public JsonResult Remove(Guid ActualPaymentGUID)
         {
             var actualPaymentService = this.GetService<IActualPaymentService>();
 
-            actualPaymentService.LogicDelete<ActualPayment>(actualPaymentGUID);
+            actualPaymentService.LogicDelete<ActualPayment>(ActualPaymentGUID);
             ShowMessage("I10030");
 
             return Json(null);

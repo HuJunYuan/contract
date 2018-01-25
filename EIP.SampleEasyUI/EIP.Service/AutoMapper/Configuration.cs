@@ -14,7 +14,7 @@ namespace EIP.Service.AutoMapper
         {
             //Mapper.AddProfile<Profiles.PMPostProfile>();
             //Mapper.AddProfile<Profiles.StudentProfile>();
-
+            Mapper.AddProfile<Profiles.ContractProfile>();
             Mapper.AddProfile<Profiles.CodeMasterProfile>();
 
             Mapper.AddProfile<Profiles.AppConfigProfile>();

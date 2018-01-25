@@ -79,13 +79,13 @@
 
     //加载回款项
     function doOpenReceiveMoney() {
-        alert("hello");
+       
        var row = $('#grid_contractBasicInfo').datagrid('getSelected');
-        alert("2");
+        
        $("#receiveMoney").panel("refresh", '/ActualPayment/list?ContractGUID=' + row.ContractGUID);
-        alert("3");
+       
         $("#receiveMoneyPlan").panel('refresh', '/RepaymentPlan/list?ContractGUID=' + row.ContractGUID);
-        alert("4");
+      
        
 
     }

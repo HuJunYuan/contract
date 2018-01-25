@@ -6,37 +6,30 @@
 @section head{
 }
 <form id="form_ActualPayment" class="easyui-form" method="post" data-options="">
-        
-            <!--实际回款标识串-->
-            @Html.HiddenFor(p => p.ActualPaymentGUID)    
-        
-            <!--合同基本信息标识-->
-            @Html.HiddenFor(p => p.ContractGUID)    
 
-        
-            <div class="form-item">
-                    @Html.CLDatetimeBoxFor(p => p.ActualPaymentDate, new DatetimeBox() { Label = "实际回款时间 ：", Style = "width:90%;" })
-            </div>
+    <!--实际回款标识串-->
+    @Html.HiddenFor(p => p.ActualPaymentGUID)
 
-        
-            <div class="form-item">
-                    @Html.CLTextBoxFor(p => p.ActualPaymentAmount, new TextBox() { Label = "实际回款金额 ：", Style = "width:90%;" })
-            </div>
+    <!--合同基本信息标识-->
+    @*@Html.HiddenFor(p => p.ContractGUID)*@
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.ContractGUID, new TextBox() { Label = "合同GUID ：", Style = "width:90%;" })
+    </div>
 
-        
-            <div class="form-item">
-                    @Html.CLTextBoxFor(p => p.Remarks, new TextBox() { Label = "备注 ：", Style = "width:90%;" })
-            </div>
+    <div class="form-item">
+        @Html.CLDatetimeBoxFor(p => p.ActualPaymentDate, new DatetimeBox() { Label = "实际回款时间 ：", Style = "width:90%;" })
+    </div>
 
-        
-            <div class="form-item">
-                    @Html.CLTextBoxFor(p => p.Other, new TextBox() { Label = "冗余字段 ：", Style = "width:90%;" })
-            </div>
 
-        
-            <div class="form-item">
-                    @Html.CLTextBoxFor(p => p.ContractBasicInfo, new TextBox() { Label = "记录项目的一些基本信息 ：", Style = "width:90%;" })
-            </div>
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.ActualPaymentAmount, new TextBox() { Label = "实际回款金额 ：", Style = "width:90%;" })
+    </div>
+
+
+    <div class="form-item">
+        @Html.CLTextBoxFor(p => p.Remarks, new TextBox() { Label = "备注 ：", Style = "width:90%;" })
+    </div>
+
 
 </form>
 <script type="text/javascript">
@@ -71,7 +64,7 @@
 
         window.App.showConfirm('@MessageManager.GetMessage("Q10030")',
             function () {
-                window.App.CloseWindow();
+                
             });
     }
 </script>

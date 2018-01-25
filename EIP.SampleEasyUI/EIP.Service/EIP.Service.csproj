@@ -71,6 +71,7 @@
     <Compile Include="AutoMapper\Profiles\AppConfigProfile.cs" />
     <Compile Include="AutoMapper\Profiles\BaseProfile.cs" />
     <Compile Include="AutoMapper\Profiles\CodeMasterProfile.cs" />
+    <Compile Include="AutoMapper\Profiles\ContractProfile.cs" />
     <Compile Include="AutoMapper\Profiles\StudentProfile.cs" />
     <Compile Include="IActualPaymentService.cs" />
     <Compile Include="IAppCodeMasterService.cs" />

@@ -11,10 +11,8 @@
     @Html.HiddenFor(p => p.ActualPaymentGUID)
 
     <!--合同基本信息标识-->
-    @*@Html.HiddenFor(p => p.ContractGUID)*@
-    <div class="form-item">
-        @Html.CLTextBoxFor(p => p.ContractGUID, new TextBox() { Label = "合同GUID ：", Style = "width:90%;" })
-    </div>
+    @Html.HiddenFor(p => p.ContractGUID)
+   
 
     <div class="form-item">
         @Html.CLDatetimeBoxFor(p => p.ActualPaymentDate, new DatetimeBox() { Label = "实际回款时间 ：", Style = "width:90%;" })

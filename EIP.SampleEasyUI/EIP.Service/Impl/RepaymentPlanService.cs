@@ -83,7 +83,7 @@ namespace EIP.Service
             if (entity != null)
             {
                 //更新数据
-                //entity = Mapper.Map<RepaymentPlan, RepaymentPlan>(model, entity);
+                entity = Mapper.Map<RepaymentPlan, RepaymentPlan>(model, entity);
                 this.repaymentPlanRepository.Update(entity);
             }
             else

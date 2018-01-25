@@ -83,7 +83,7 @@ namespace EIP.Service
             if (entity != null)
             {
                 //更新数据
-                //entity = Mapper.Map<ContractBasicInfo, ContractBasicInfo>(model, entity);
+                entity = Mapper.Map<ContractBasicInfo, ContractBasicInfo>(model, entity);
                 this.contractBasicInfoRepository.Update(entity);
             }
             else

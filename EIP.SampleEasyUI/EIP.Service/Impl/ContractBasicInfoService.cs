@@ -82,6 +82,8 @@ namespace EIP.Service
             //更新数据 ， 否则新增数据
             if (entity != null)
             {
+                entity.ActualPayments.ForEach(s => {  s.ContractBasicInfo = entity; });
+                entity.RepaymentPlans.ForEach(r => {  r.ContractBasicInfo = entity; });
                 //更新数据
                 entity = Mapper.Map<ContractBasicInfo, ContractBasicInfo>(model, entity);
                 this.contractBasicInfoRepository.Update(entity);

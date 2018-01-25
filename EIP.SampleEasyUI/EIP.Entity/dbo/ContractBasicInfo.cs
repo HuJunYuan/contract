@@ -107,14 +107,14 @@ namespace EIP.Entity
         [MaxLength(100)]
         public string Other { get; set; }
     
-       // /// <summary>
-       // /// 实际回款
-       // /// </summary>
-       // public virtual IList<ActualPayment> ActualPayments { get; set; }
-       //
-       // /// <summary>
-       // /// 合同回款计划
-       // /// </summary>
-       // public virtual IList<RepaymentPlan> RepaymentPlans { get; set; }
+       /// <summary>
+       /// 实际回款
+       /// </summary>
+       public virtual IList<ActualPayment> ActualPayments { get; set; }
+       
+       /// <summary>
+       /// 合同回款计划
+       /// </summary>
+       public virtual IList<RepaymentPlan> RepaymentPlans { get; set; }
     }
 }

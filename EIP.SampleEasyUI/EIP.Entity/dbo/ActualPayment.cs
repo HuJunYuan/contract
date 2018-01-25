@@ -59,11 +59,11 @@ namespace EIP.Entity
         [MaxLength(100)]
         public string Other { get; set; }
     
-        ///// <summary>
-        ///// 记录项目的一些基本信息
-        ///// </summary>
-        //[ForeignKey("ContractGUID")]
-        //[Newtonsoft.Json.JsonIgnore]
-        //public virtual ContractBasicInfo ContractBasicInfo { get; set; }
+        /// <summary>
+        /// 记录项目的一些基本信息
+        /// </summary>
+        [ForeignKey("ContractGUID")]
+        [Newtonsoft.Json.JsonIgnore]
+        public virtual ContractBasicInfo ContractBasicInfo { get; set; }
     }
 }

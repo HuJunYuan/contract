@@ -14,13 +14,18 @@ namespace EIP.Service.AutoMapper.Profiles
         protected override void Configure()
         {
             //数据字典添加映射
-            CreateMap<ContractBasicInfo, ContractBasicInfo>();
-            //.ForMember(des => des.ContractGUID, map => map.Ignore());
+            CreateMap<ContractBasicInfo, ContractBasicInfo>()
+            .ForMember(des => des.CreateUserId, map => map.Ignore())
+            .ForMember(des => des.LastUpdateUserId, map => map.Ignore())
+            .ForMember(des => des.ActualPayments, map => map.Ignore())
+            .ForMember(des => des.RepaymentPlans, map => map.Ignore());
 
-            CreateMap<ActualPayment, ActualPayment>();
-            //.ForMember(des => des.ContractGUID, map => map.Ignore());
-            CreateMap<RepaymentPlan, RepaymentPlan>();
-                //.ForMember(des => des.ContractGUID, map => map.Ignore());
+            CreateMap<ActualPayment, ActualPayment>()
+            .ForMember(des => des.ContractBasicInfo, map => map.Ignore());
+
+
+            CreateMap<RepaymentPlan, RepaymentPlan>()
+                .ForMember(des => des.ContractBasicInfo, map => map.Ignore());
 
 
 

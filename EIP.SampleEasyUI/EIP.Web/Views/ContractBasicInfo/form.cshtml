@@ -94,7 +94,8 @@
         var formData = $("#form_ContractBasicInfo").form("getData");
         App.action(App.getUrl("/ContractBasicInfo/save"), formData,
             function (data) {
-                //todo
+                $('#dlg_contractBasicInfo').dialog("close");
+                $('#grid_contractBasicInfo').datagrid("load");
             });
 
     }
@@ -104,7 +105,7 @@
 
         window.App.showConfirm('@MessageManager.GetMessage("Q10030")',
             function () {
-                window.App.CloseWindow();
+                $('#dlg_contractBasicInfo').dialog("close");
             });
     }
 </script>

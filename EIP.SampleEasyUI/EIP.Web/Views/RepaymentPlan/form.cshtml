@@ -52,7 +52,8 @@
         var formData = $("#form_RepaymentPlan").form("getData");
         App.action(App.getUrl("/RepaymentPlan/save"), formData,
             function (data) {
-                //todo
+                $('#dlg_repaymentPlan').dialog("close");
+                $('#grid_repaymentPlan').datagrid({ url: '/RepaymentPlan/loadListByGuid?ContractGUID=' + formData.ContractGUID });
             });
 
     }
@@ -62,7 +63,7 @@
 
         window.App.showConfirm('@MessageManager.GetMessage("Q10030")',
             function () {
-                window.App.CloseWindow();
+                $('#dlg_repaymentPlan').dialog("close");
             });
     }
 </script>

@@ -10,7 +10,6 @@
     <thead>
         <tr>
             <th data-options="field:'ck',checkbox:true"></th>
-            
             <th data-options="field:'ActualPaymentGUID',hidden:true,width:100">ActualPaymentGUID</th>
             <th data-options="field:'ContractGUID',width:100,hidden:true">合同基本信息标识</th>
             <th data-options="field:'ActualPaymentDate',width:200,align:'center'">实际回款时间</th>
@@ -21,12 +20,11 @@
         </tr>
     </thead>
 </table>
+<input type="text" value=@ViewBag.contractGuid hidden id="guidBox" />
 
 <div id="grid_ActualPaymenttoolbar" style="padding:5px;height:auto">
-    <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAddActualPaymenttool()">添加</a>
-    <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDelActualPaymenttool()">删除</a>
-    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入实际回款名。" })
-    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearchActualPaymenttool()">查询</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAddActualPaymenttool()">添加实际回款</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDelActualPaymenttool()">删除实际回款</a>
 </div>
 
 <div id="dlg_actualPayment" class="easyui-dialog" title="实际回款编辑" style="width: 400px; height: 400px; padding: 10px"
@@ -42,15 +40,11 @@
 </div>
 
 <script>
-    function doSearchActualPaymenttool() {
-        $('#grid_actualPayment').datagrid('load', {
-            Key: $('#Key').val()
-        });
-    }
 
     // 添加
     function doAddActualPaymenttool() {
-        $('#dlg_actualPayment').dialog("open").dialog('refresh', App.getUrl('/ActualPayment/add'));
+     
+        $('#dlg_actualPayment').dialog("open").dialog('refresh', App.getUrl('/ActualPayment/add?ContractGUID=' + $("#guidBox").val()));
     }
 
     // 删除
@@ -60,6 +54,7 @@
             App.showMessageBox('@MessageManager.GetMessage("E10060")', 2);
             return false;
         }
+
 
         window.App.showConfirm('@MessageManager.GetMessage("Q10010")',
             function () {

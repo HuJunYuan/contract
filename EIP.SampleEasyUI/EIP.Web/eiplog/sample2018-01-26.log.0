@@ -1,0 +1,616 @@
+﻿2018-01-26 09:11:36,633 [1] INFO  HADOOP\hujunyuan -----系统启动-----
+2018-01-26 09:11:37,773 [1] INFO  HADOOP\hujunyuan -----配置信息初始化【START】-----
+2018-01-26 09:11:39,611 [1] DEBUG HADOOP\hujunyuan Executed in    666 ms,	SQL:IF db_id(N'CONTRACT_SYS') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'CONTRACT_SYS'
+2018-01-26 09:11:40,580 [1] DEBUG HADOOP\hujunyuan Executed in    253 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2018-01-26 09:11:40,609 [1] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2018-01-26 09:11:40,705 [1] DEBUG HADOOP\hujunyuan Executed in     33 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2018-01-26 09:11:40,883 [1] DEBUG HADOOP\hujunyuan Executed in    169 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2018-01-26 09:11:40,945 [1] DEBUG HADOOP\hujunyuan Executed in     28 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.Web'
+2018-01-26 09:11:40,959 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll() [END]
+2018-01-26 09:11:40,987 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:40,993 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,003 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,009 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,036 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,044 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,055 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,062 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,071 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,086 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,137 [1] DEBUG HADOOP\hujunyuan Executed in     30 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.SystemManage'
+2018-01-26 09:11:41,219 [1] DEBUG HADOOP\hujunyuan Executed in     52 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.Web'
+2018-01-26 09:11:41,266 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.CodeService.GetAllCode() [END]
+2018-01-26 09:11:41,278 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,313 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,326 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,353 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,357 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,365 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,384 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,398 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,404 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,413 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,418 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,420 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,422 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,426 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,429 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,435 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:41,439 [1] INFO  HADOOP\hujunyuan -----配置信息初始化【END】-----
+2018-01-26 09:11:42,421 [6] DEBUG HADOOP\hujunyuan Executed in     83 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2018-01-26 09:11:42,637 [6] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2018-01-26 09:11:42,744 [6] DEBUG HADOOP\hujunyuan Executed in     50 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2018-01-26 09:11:42,765 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:42,770 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:11:43,105 [6] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:11:43,408 [6] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:11:51,186 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:11:51,398 [6] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:11:51,456 [6] NOTICE HADOOP\hujunyuan 用户登录
+2018-01-26 09:11:51,531 [6] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2018-01-26 09:11:51,553 [6] DEBUG HADOOP\hujunyuan Executed in     19 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2018-01-26 09:11:51,557 [6] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2018-01-26 09:11:51,583 [6] DEBUG HADOOP\hujunyuan Executed in     23 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2018-01-26 09:11:51,586 [6] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2018-01-26 09:11:51,591 [6] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:11:51,595 [6] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2018-01-26 09:11:51,599 [6] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:11:51,864 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:11:51,870 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:11:51,915 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:11:57,448 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:11:57,484 [10] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:11:57,679 [10] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:11:59,216 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:11:59,417 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:11:59,723 [5] DEBUG HADOOP\hujunyuan Executed in    109 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like '%' ) AS T 
+2018-01-26 09:11:59,764 [5] DEBUG HADOOP\hujunyuan Executed in     25 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ContractGUID ) as row_number, * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like '%' ) AS T WHERE row_number between 1 and 10
+2018-01-26 09:11:59,815 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ContractBasicInfoService.QueryContractBasicInfo() [END]
+2018-01-26 09:11:59,821 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:12:10,537 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:12:10,538 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:12:10,681 [10] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:12:10,681 [6] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:12:10,737 [10] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:12:10,824 [6] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:12:12,848 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:12:13,195 [6] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:12:13,457 [6] DEBUG HADOOP\hujunyuan Executed in     61 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:12:13,478 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:12:13,483 [6] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:12:30,819 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:12:30,831 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:12:31,087 [6] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:12:31,088 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:12:31,403 [6] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:12:31,438 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:12:36,937 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:12:36,944 [6] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:12:37,120 [6] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:12:37,124 [6] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:12:37,131 [6] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:15:05,647 [12] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:15:05,656 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:15:05,687 [12] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:15:05,694 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:15:05,805 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:15:05,854 [12] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:15:06,189 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:15:06,213 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:15:06,305 [5] DEBUG HADOOP\hujunyuan Executed in     30 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:15:06,312 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:15:06,324 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:15:07,120 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:15:07,162 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:15:07,342 [5] DEBUG HADOOP\hujunyuan Executed in     85 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:15:07,352 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:15:07,358 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:17:26,335 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:17:26,494 [15] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:17:26,592 [15] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:17:27,930 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:17:28,101 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:17:28,235 [5] DEBUG HADOOP\hujunyuan Executed in     60 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like '%' ) AS T 
+2018-01-26 09:17:28,358 [5] DEBUG HADOOP\hujunyuan Executed in     27 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ContractGUID ) as row_number, * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like '%' ) AS T WHERE row_number between 1 and 10
+2018-01-26 09:17:28,361 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ContractBasicInfoService.QueryContractBasicInfo() [END]
+2018-01-26 09:17:28,400 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:17:44,583 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:17:44,583 [13] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:17:44,613 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:17:44,743 [13] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:17:44,765 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:17:44,823 [13] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:17:45,165 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:17:45,190 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:17:45,311 [5] DEBUG HADOOP\hujunyuan Executed in     53 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:17:45,360 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:17:45,367 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:17:46,235 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:17:46,242 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:17:46,323 [5] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:17:46,334 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:17:46,337 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:17:50,903 [13] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:17:50,916 [13] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:17:51,125 [13] DEBUG HADOOP\hujunyuan Executed in     33 ms,	SQL:SELECT TOP (2)      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE [Extent1].[ActualPaymentGUID] = @'720afd38-8b1e-47a1-8a7b-3fce666e5fa9'
+2018-01-26 09:17:51,130 [13] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.Find() [END]
+2018-01-26 09:17:51,133 [13] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:17:59,540 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:17:59,621 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:17:59,718 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:17:59,756 [5] ERROR HADOOP\hujunyuan The parameters dictionary contains a null entry for parameter 'ContractGUID' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Add(System.Guid)' in 'EIP.Web.Controllers.ActualPaymentController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'ContractGUID' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Add(System.Guid)' in 'EIP.Web.Controllers.ActualPaymentController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+   在 System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   在 System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   在 System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2018-01-26 09:17:59,834 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:18:21,490 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:18:21,491 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:18:21,541 [15] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:18:21,569 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:18:21,709 [15] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:18:21,738 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:18:21,806 [15] ERROR HADOOP\hujunyuan The parameters dictionary contains a null entry for parameter 'ContractGUID' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Add(System.Guid)' in 'EIP.Web.Controllers.ActualPaymentController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'ContractGUID' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Add(System.Guid)' in 'EIP.Web.Controllers.ActualPaymentController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+   在 System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   在 System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   在 System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2018-01-26 09:18:21,895 [5] ERROR HADOOP\hujunyuan The parameters dictionary contains a null entry for parameter 'ContractGUID' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Add(System.Guid)' in 'EIP.Web.Controllers.ActualPaymentController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'ContractGUID' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Add(System.Guid)' in 'EIP.Web.Controllers.ActualPaymentController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+   在 System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   在 System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   在 System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2018-01-26 09:18:22,117 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:18:22,336 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:19:02,906 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:19:03,056 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:19:03,059 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:19:03,137 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:19:03,143 [15] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:19:03,489 [15] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:19:04,004 [13] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:19:04,014 [13] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:19:04,148 [13] DEBUG HADOOP\hujunyuan Executed in     57 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:19:04,152 [13] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:19:04,157 [13] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:19:04,541 [13] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:19:04,610 [13] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:19:04,681 [13] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:19:04,684 [13] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:19:04,687 [13] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:19:07,149 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:19:07,160 [13] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:19:07,320 [15] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:19:07,337 [13] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:19:07,377 [15] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:19:07,399 [13] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:19:07,449 [15] ERROR HADOOP\hujunyuan The parameters dictionary contains a null entry for parameter 'ContractGUID' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Add(System.Guid)' in 'EIP.Web.Controllers.ActualPaymentController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'ContractGUID' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Add(System.Guid)' in 'EIP.Web.Controllers.ActualPaymentController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+   在 System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   在 System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   在 System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2018-01-26 09:19:07,491 [13] ERROR HADOOP\hujunyuan The parameters dictionary contains a null entry for parameter 'ContractGUID' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Add(System.Guid)' in 'EIP.Web.Controllers.ActualPaymentController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'ContractGUID' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Add(System.Guid)' in 'EIP.Web.Controllers.ActualPaymentController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+   在 System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   在 System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   在 System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2018-01-26 09:19:07,584 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:19:07,669 [13] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:20:53,405 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:20:53,471 [11] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:20:53,715 [11] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:20:55,438 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:20:55,506 [11] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:20:56,263 [11] DEBUG HADOOP\hujunyuan Executed in    446 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like '%' ) AS T 
+2018-01-26 09:20:56,325 [11] DEBUG HADOOP\hujunyuan Executed in     46 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ContractGUID ) as row_number, * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like '%' ) AS T WHERE row_number between 1 and 10
+2018-01-26 09:20:56,328 [11] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ContractBasicInfoService.QueryContractBasicInfo() [END]
+2018-01-26 09:20:56,335 [11] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:20:57,124 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:20:57,141 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:20:57,142 [11] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:20:57,149 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:20:57,178 [11] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:20:57,220 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:20:57,623 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:20:57,669 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:20:58,011 [5] DEBUG HADOOP\hujunyuan Executed in    201 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:20:58,038 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:20:58,366 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:20:59,113 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:20:59,119 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:20:59,198 [5] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:20:59,201 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:20:59,204 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:21:04,309 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:21:04,309 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:21:04,341 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:21:04,344 [11] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:21:04,436 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:21:04,476 [11] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:21:04,894 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:21:05,060 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:21:05,219 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:21:05,243 [5] DEBUG HADOOP\hujunyuan Executed in     20 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:21:05,255 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:21:05,267 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:21:05,267 [11] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:21:05,697 [11] DEBUG HADOOP\hujunyuan Executed in    100 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:21:05,699 [11] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:21:05,731 [11] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:22:25,157 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:25,315 [11] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:22:25,319 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:25,392 [11] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:22:25,395 [15] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:22:25,759 [15] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:22:25,761 [12] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:25,958 [12] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:22:26,337 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:26,466 [12] DEBUG HADOOP\hujunyuan Executed in     54 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:22:26,470 [12] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:22:26,480 [12] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:22:26,480 [15] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:22:26,703 [15] DEBUG HADOOP\hujunyuan Executed in     32 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:22:26,706 [15] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:22:26,714 [15] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:22:29,074 [12] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:29,130 [12] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:22:29,158 [12] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:22:29,199 [12] ERROR HADOOP\hujunyuan The parameters dictionary contains a null entry for parameter 'ContractGUID' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Add(System.Guid)' in 'EIP.Web.Controllers.ActualPaymentController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+System.ArgumentException: The parameters dictionary contains a null entry for parameter 'ContractGUID' of non-nullable type 'System.Guid' for method 'System.Web.Mvc.ActionResult Add(System.Guid)' in 'EIP.Web.Controllers.ActualPaymentController'. An optional parameter must be a reference type, a nullable type, or be declared as an optional parameter.
+参数名: parameters
+   在 System.Web.Mvc.ActionDescriptor.ExtractParameterFromDictionary(ParameterInfo parameterInfo, IDictionary`2 parameters, MethodInfo methodInfo)
+   在 System.Web.Mvc.ReflectedActionDescriptor.<>c__DisplayClass1.<Execute>b__0(ParameterInfo parameterInfo)
+   在 System.Linq.Enumerable.WhereSelectArrayIterator`2.MoveNext()
+   在 System.Linq.Buffer`1..ctor(IEnumerable`1 source)
+   在 System.Linq.Enumerable.ToArray[TSource](IEnumerable`1 source)
+   在 System.Web.Mvc.ReflectedActionDescriptor.Execute(ControllerContext controllerContext, IDictionary`2 parameters)
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass42.<BeginInvokeSynchronousActionMethod>b__41()
+   在 System.Web.Mvc.Async.AsyncResultWrapper.<>c__DisplayClass8`1.<BeginSynchronous>b__7(IAsyncResult _)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<>c__DisplayClass39.<BeginInvokeActionMethodWithFilters>b__33()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass4f.<InvokeActionMethodFilterAsynchronously>b__49()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeActionMethodWithFilters>b__36(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.End()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<>c__DisplayClass2a.<BeginInvokeAction>b__20()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass25.<BeginInvokeAction>b__22(IAsyncResult asyncResult)
+2018-01-26 09:22:29,279 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:45,857 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:45,987 [15] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:22:46,326 [15] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:22:47,890 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:48,182 [11] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:22:48,560 [11] DEBUG HADOOP\hujunyuan Executed in     86 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like '%' ) AS T 
+2018-01-26 09:22:48,598 [11] DEBUG HADOOP\hujunyuan Executed in     32 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ContractGUID ) as row_number, * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like '%' ) AS T WHERE row_number between 1 and 10
+2018-01-26 09:22:48,601 [11] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ContractBasicInfoService.QueryContractBasicInfo() [END]
+2018-01-26 09:22:48,605 [11] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:22:49,457 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:49,459 [12] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:49,468 [15] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:22:49,522 [15] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:22:49,538 [12] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:22:49,681 [12] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:22:50,535 [12] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:50,667 [12] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:22:50,981 [12] DEBUG HADOOP\hujunyuan Executed in     48 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:22:50,986 [12] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:22:51,015 [12] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:22:51,471 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:51,483 [11] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:22:51,726 [11] DEBUG HADOOP\hujunyuan Executed in     17 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:22:51,729 [11] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:22:51,733 [11] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:22:54,511 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:22:54,529 [11] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:23:00,784 [11] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:23:11,498 [12] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:23:11,559 [12] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:23:11,764 [12] DEBUG HADOOP\hujunyuan Executed in     29 ms,	SQL:SELECT TOP (2)      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE [Extent1].[ActualPaymentGUID] = @'00000000-0000-0000-0000-000000000000'
+2018-01-26 09:23:11,894 [12] DEBUG HADOOP\hujunyuan Executed in     96 ms,	SQL:INSERT [dbo].[ActualPayment]([ActualPaymentGUID], [ContractGUID], [ActualPaymentDate], [ActualPaymentAmount], [Remarks], [Other], [CreateUserId], [CreateUserName], [CreateTime], [LastUpdateUserId], [LastUpdateUserName], [LastUpdateTime], [LogicDeleteFlag]) VALUES ('2726de67-79ae-41ec-ac96-94f61f652b3f', 'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9', '2018/1/26 9:23:05', '4321', NULL, NULL, '2', '朱坤', '2018/1/26 9:23:11', '2', '朱坤', '2018/1/26 9:23:11', 'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9'0) 
+2018-01-26 09:23:11,898 [12] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.SaveActualPayment() [END]
+2018-01-26 09:23:11,905 [12] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:23:15,418 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:23:15,428 [12] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:23:15,483 [12] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:23:15,589 [11] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:23:15,633 [12] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:23:15,711 [11] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:23:16,076 [12] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:23:16,085 [12] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:23:16,193 [12] DEBUG HADOOP\hujunyuan Executed in     72 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:23:16,197 [12] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:23:16,211 [12] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:23:16,383 [15] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:23:16,482 [15] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:23:16,635 [15] DEBUG HADOOP\hujunyuan Executed in     53 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:23:16,637 [15] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:23:16,640 [15] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:23:41,253 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:23:41,265 [9] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:23:41,265 [11] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:23:41,274 [9] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:23:41,344 [11] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:23:41,414 [9] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:23:42,209 [9] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:23:42,234 [9] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:23:42,569 [9] DEBUG HADOOP\hujunyuan Executed in    148 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:23:42,574 [9] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:23:42,588 [9] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:23:43,034 [11] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:23:43,048 [11] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:23:43,116 [11] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:23:43,128 [11] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:23:43,130 [11] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:27:28,949 [1] INFO  HADOOP\hujunyuan -----系统启动-----
+2018-01-26 09:27:29,171 [1] INFO  HADOOP\hujunyuan -----配置信息初始化【START】-----
+2018-01-26 09:27:30,237 [1] DEBUG HADOOP\hujunyuan Executed in    325 ms,	SQL:IF db_id(N'CONTRACT_SYS') IS NOT NULL SELECT 1 ELSE SELECT Count(*) FROM sys.databases WHERE [name]=N'CONTRACT_SYS'
+2018-01-26 09:27:30,809 [1] DEBUG HADOOP\hujunyuan Executed in     87 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]         WHERE [Extent1].[ContextKey] = @'System.Data.Entity.DbContext'     )  AS [GroupBy1]
+2018-01-26 09:27:30,842 [1] DEBUG HADOOP\hujunyuan Executed in     24 ms,	SQL:SELECT      [GroupBy1].[A1] AS [C1]     FROM ( SELECT          COUNT(1) AS [A1]         FROM [dbo].[__MigrationHistory] AS [Extent1]     )  AS [GroupBy1]
+2018-01-26 09:27:30,925 [1] DEBUG HADOOP\hujunyuan Executed in     25 ms,	SQL:SELECT TOP (1)      [Extent1].[Id] AS [Id],      [Extent1].[ModelHash] AS [ModelHash]     FROM [dbo].[EdmMetadata] AS [Extent1]     ORDER BY [Extent1].[Id] DESC
+2018-01-26 09:27:31,046 [1] DEBUG HADOOP\hujunyuan Executed in    116 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.SystemManage'
+2018-01-26 09:27:31,090 [1] DEBUG HADOOP\hujunyuan Executed in     25 ms,	SQL:[pub].[UP_AppSettingAll] 'EIP.Web'
+2018-01-26 09:27:31,108 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.AppSettingService.GetAppSettingAll() [END]
+2018-01-26 09:27:31,123 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,146 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,155 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,167 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,181 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,192 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,200 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,212 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,218 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,234 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,377 [1] DEBUG HADOOP\hujunyuan Executed in     96 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.SystemManage'
+2018-01-26 09:27:31,426 [1] DEBUG HADOOP\hujunyuan Executed in     18 ms,	SQL:[pub].[UP_GetCodesByAppIdentity] 'EIP.Web'
+2018-01-26 09:27:31,431 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.CodeService.GetAllCode() [END]
+2018-01-26 09:27:31,438 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,440 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,444 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,447 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,450 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,455 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,459 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,464 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,470 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,477 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,480 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,483 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,489 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,494 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,497 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,500 [1] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:31,505 [1] INFO  HADOOP\hujunyuan -----配置信息初始化【END】-----
+2018-01-26 09:27:34,233 [6] DEBUG HADOOP\hujunyuan Executed in     68 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2018-01-26 09:27:34,479 [6] DEBUG HADOOP\hujunyuan Executed in     21 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2018-01-26 09:27:34,563 [6] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2018-01-26 09:27:34,582 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:27:34,602 [6] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:27:36,200 [6] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:27:36,396 [6] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:28:22,556 [9] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:28:22,908 [9] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:28:23,028 [9] NOTICE HADOOP\hujunyuan 用户登录
+2018-01-26 09:28:23,151 [9] DEBUG HADOOP\hujunyuan Executed in     49 ms,	SQL:SELECT TOP (1)      [Extent1].[EmpId] AS [EmpId],      [Extent1].[HREmployeeNO] AS [HREmployeeNO],      [Extent1].[CN] AS [CN],      [Extent1].[Sex] AS [Sex],      [Extent1].[Nation] AS [Nation],      [Extent1].[Email1] AS [Email1],      [Extent1].[Email2] AS [Email2],      [Extent1].[Mobile1] AS [Mobile1],      [Extent1].[Mobile2] AS [Mobile2],      [Extent1].[VCode] AS [VCode],      [Extent1].[EmployeeLevel] AS [EmployeeLevel],      [Extent1].[UserType] AS [UserType],      [Extent1].[UserStatus] AS [UserStatus],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM  [pub].[UUC_Employee] AS [Extent1]     LEFT OUTER JOIN [pub].[UUC_EmployeeExt] AS [Extent2] ON [Extent1].[EmpId] = [Extent2].[EmpId]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (([Extent2].[LoginName] = @'eip') OR (([Extent2].[LoginName] IS NULL) AND (@'eip' IS NULL)))
+2018-01-26 09:28:23,177 [9] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT      [Extent1].[EmpId] AS [EmpId],      [Extent1].[LoginName] AS [LoginName],      [Extent1].[PassWord] AS [PassWord],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_EmployeeExt] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2018-01-26 09:28:23,182 [9] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Service.DefaultMembershipService.ValidateUser() [END]
+2018-01-26 09:28:23,209 [9] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT      [Extent1].[RelId] AS [RelId],      [Extent1].[DptId] AS [DptId],      [Extent1].[EmpId] AS [EmpId],      [Extent1].[Parttimer] AS [Parttimer],      [Extent1].[Position] AS [Position],      [Extent1].[MangeLevel] AS [MangeLevel],      [Extent1].[StartTime] AS [StartTime],      [Extent1].[EndTime] AS [EndTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [pub].[UUC_OrgRelEmployee] AS [Extent1]     WHERE [Extent1].[EmpId] = @'2'
+2018-01-26 09:28:23,219 [9] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.ValidateUser() [END]
+2018-01-26 09:28:23,225 [9] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Caching.DefaultCacheService.Put() [END]
+2018-01-26 09:28:23,229 [9] DEBUG HADOOP\hujunyuan 	eip	CoreLand.Framework.Service.Impl.FormsAuthenticationService.SignIn() [END]
+2018-01-26 09:28:23,235 [9] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:28:23,621 [9] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:28:23,625 [9] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:28:23,685 [9] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:28:54,648 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:28:54,808 [10] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:28:55,049 [10] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:28:57,242 [10] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:28:57,987 [10] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:28:58,931 [10] DEBUG HADOOP\hujunyuan Executed in    351 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like '%' ) AS T 
+2018-01-26 09:28:59,117 [10] DEBUG HADOOP\hujunyuan Executed in     82 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ContractGUID ) as row_number, * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like '%' ) AS T WHERE row_number between 1 and 10
+2018-01-26 09:28:59,172 [10] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ContractBasicInfoService.QueryContractBasicInfo() [END]
+2018-01-26 09:28:59,176 [10] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:44:00,694 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:44:00,782 [21] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:44:00,859 [21] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:44:00,892 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:44:00,964 [21] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:44:01,019 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:44:02,765 [24] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:44:02,771 [24] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:44:03,652 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:44:03,656 [24] DEBUG HADOOP\hujunyuan Executed in     39 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:44:03,670 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:44:03,683 [24] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:44:03,734 [24] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:44:03,843 [5] DEBUG HADOOP\hujunyuan Executed in     38 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:44:03,856 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:44:03,863 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:44:05,193 [24] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:44:05,203 [24] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:44:05,268 [24] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:44:12,265 [24] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:44:12,344 [24] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:44:12,494 [24] DEBUG HADOOP\hujunyuan Executed in     52 ms,	SQL:SELECT TOP (2)      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE [Extent1].[RepaymentPlantGUID] = @'00000000-0000-0000-0000-000000000000'
+2018-01-26 09:44:12,643 [24] DEBUG HADOOP\hujunyuan Executed in    101 ms,	SQL:INSERT [dbo].[RepaymentPlan]([RepaymentPlantGUID], [ContractGUID], [RepaymentPlanDate], [RepaymentPlanAmount], [Remarks], [Other], [CreateUserId], [CreateUserName], [CreateTime], [LastUpdateUserId], [LastUpdateUserName], [LastUpdateTime], [LogicDeleteFlag]) VALUES ('940586b1-20d2-4601-950b-7410829b8dd0', 'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9', '2018/1/26 9:44:07', '134242', '31324', NULL, '2', '朱坤', '2018/1/26 9:44:12', '2', '朱坤', 'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9'0, 'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9'1) 
+2018-01-26 09:44:12,648 [24] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.SaveRepaymentPlan() [END]
+2018-01-26 09:44:12,652 [24] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:44:15,536 [24] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:44:15,642 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:44:15,642 [24] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:44:15,724 [24] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:44:15,730 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:44:15,900 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:44:15,989 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:44:15,997 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:44:16,437 [24] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:44:16,470 [24] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:44:16,515 [5] DEBUG HADOOP\hujunyuan Executed in     41 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:44:16,565 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:44:16,569 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:44:16,612 [24] DEBUG HADOOP\hujunyuan Executed in     28 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:44:16,652 [24] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:44:16,708 [24] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:45:06,830 [24] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:45:06,863 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:45:06,908 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:45:06,944 [24] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:45:07,066 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:45:07,163 [24] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:45:09,074 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:45:09,205 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:45:09,807 [5] DEBUG HADOOP\hujunyuan Executed in     30 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:45:09,813 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:45:09,816 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:45:09,968 [21] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:45:09,972 [21] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:45:10,061 [21] DEBUG HADOOP\hujunyuan Executed in     53 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:45:10,063 [21] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:45:10,065 [21] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:46:17,012 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:46:17,062 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:46:17,198 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:46:18,340 [24] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:46:18,358 [24] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:46:18,491 [24] DEBUG HADOOP\hujunyuan Executed in     39 ms,	SQL: SELECT COUNT(1) AS RecordCount FROM (select * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like '%' ) AS T 
+2018-01-26 09:46:18,534 [24] DEBUG HADOOP\hujunyuan Executed in     36 ms,	SQL:SELECT * FROM (SELECT ROW_NUMBER() OVER(ORDER BY ContractGUID ) as row_number, * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like '%' ) AS T WHERE row_number between 1 and 10
+2018-01-26 09:46:18,542 [24] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ContractBasicInfoService.QueryContractBasicInfo() [END]
+2018-01-26 09:46:18,553 [24] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:46:22,947 [17] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:46:22,951 [24] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:46:23,066 [17] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:46:23,102 [24] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:46:23,148 [17] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:46:23,205 [24] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:46:24,846 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:46:25,105 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:46:25,187 [5] DEBUG HADOOP\hujunyuan Executed in     29 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:46:25,192 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:46:25,196 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:46:25,799 [24] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:46:25,806 [24] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:46:25,906 [24] DEBUG HADOOP\hujunyuan Executed in     36 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:46:25,910 [24] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:46:25,931 [24] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:46:45,548 [5] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:46:45,631 [5] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:46:45,791 [5] DEBUG HADOOP\hujunyuan Executed in     28 ms,	SQL:SELECT TOP (2)      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE [Extent1].[RepaymentPlantGUID] = @'940586b1-20d2-4601-950b-7410829b8dd0'
+2018-01-26 09:46:45,796 [5] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.Find() [END]
+2018-01-26 09:46:45,801 [5] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:47:28,043 [23] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:47:28,127 [23] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:47:28,284 [23] DEBUG HADOOP\hujunyuan Executed in     37 ms,	SQL:SELECT TOP (2)      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE [Extent1].[ActualPaymentGUID] = @'2726de67-79ae-41ec-ac96-94f61f652b3f'
+2018-01-26 09:47:28,371 [23] DEBUG HADOOP\hujunyuan Executed in     49 ms,	SQL:UPDATE [dbo].[ActualPayment] SET [LastUpdateTime] = '2018/1/26 9:47:28', [LogicDeleteFlag] = 'True' WHERE ([ActualPaymentGUID] = '2726de67-79ae-41ec-ac96-94f61f652b3f') 
+2018-01-26 09:47:28,405 [23] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.LogicDelete() [END]
+2018-01-26 09:47:28,419 [23] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:47:28,694 [23] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:47:28,701 [23] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:47:28,788 [23] DEBUG HADOOP\hujunyuan Executed in     34 ms,	SQL:SELECT      [Extent1].[ActualPaymentGUID] AS [ActualPaymentGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[ActualPaymentDate] AS [ActualPaymentDate],      [Extent1].[ActualPaymentAmount] AS [ActualPaymentAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[ActualPayment] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:47:28,810 [23] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.ActualPaymentService.QueryActualPaymentByContractGuid() [END]
+2018-01-26 09:47:28,813 [23] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:47:36,748 [23] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:47:36,761 [23] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:47:36,882 [23] DEBUG HADOOP\hujunyuan Executed in     22 ms,	SQL:SELECT TOP (2)      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE [Extent1].[RepaymentPlantGUID] = @'940586b1-20d2-4601-950b-7410829b8dd0'
+2018-01-26 09:47:36,916 [23] DEBUG HADOOP\hujunyuan Executed in     26 ms,	SQL:UPDATE [dbo].[RepaymentPlan] SET [LastUpdateTime] = '2018/1/26 9:47:36', [LogicDeleteFlag] = 'True' WHERE ([RepaymentPlantGUID] = '940586b1-20d2-4601-950b-7410829b8dd0') 
+2018-01-26 09:47:36,920 [23] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.LogicDelete() [END]
+2018-01-26 09:47:36,924 [23] INFO  HADOOP\hujunyuan [END]
+2018-01-26 09:47:37,264 [23] DEBUG HADOOP\hujunyuan 		CoreLand.Framework.Service.Impl.FormsAuthenticationService.GetAuthenticatedUser() [END]
+2018-01-26 09:47:37,349 [23] INFO  HADOOP\hujunyuan [START]
+2018-01-26 09:47:37,475 [23] DEBUG HADOOP\hujunyuan Executed in     28 ms,	SQL:SELECT      [Extent1].[RepaymentPlantGUID] AS [RepaymentPlantGUID],      [Extent1].[ContractGUID] AS [ContractGUID],      [Extent1].[RepaymentPlanDate] AS [RepaymentPlanDate],      [Extent1].[RepaymentPlanAmount] AS [RepaymentPlanAmount],      [Extent1].[Remarks] AS [Remarks],      [Extent1].[Other] AS [Other],      [Extent1].[CreateUserId] AS [CreateUserId],      [Extent1].[CreateUserName] AS [CreateUserName],      [Extent1].[CreateTime] AS [CreateTime],      [Extent1].[LastUpdateUserId] AS [LastUpdateUserId],      [Extent1].[LastUpdateUserName] AS [LastUpdateUserName],      [Extent1].[LastUpdateTime] AS [LastUpdateTime],      [Extent1].[LogicDeleteFlag] AS [LogicDeleteFlag]     FROM [dbo].[RepaymentPlan] AS [Extent1]     WHERE (0 = [Extent1].[LogicDeleteFlag]) AND (0 = [Extent1].[LogicDeleteFlag]) AND ([Extent1].[ContractGUID] = @'f450a605-05d0-4b7f-8a9c-6e1f9a76b4e9')
+2018-01-26 09:47:37,478 [23] DEBUG HADOOP\hujunyuan 	eip	EIP.Service.RepaymentPlanService.QueryRepaymentPlanByContractGuid() [END]
+2018-01-26 09:47:37,481 [23] INFO  HADOOP\hujunyuan [END]

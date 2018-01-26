@@ -20,12 +20,11 @@
         </tr>
     </thead>
 </table>
-
+<input type="text" value=@ViewBag.contractGuid hidden id="guidBoxforActualPayment" />
 <div id="grid_repaymentPlantoolbar" style="padding:5px;height:auto">
-    <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAddrepaymentPlan()">添加</a>
-    <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDelrepaymentPlan()">删除</a>
-    @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入合同回款计划名。" })
-    <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearchrepaymentPlan()">查询</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAddrepaymentPlan()">新增计划回款</a>
+    <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDelrepaymentPlan()">删除计划回款</a>
+
 </div>
 
 <div id="dlg_repaymentPlan" class="easyui-dialog" title="合同回款计划编辑" style="width: 400px; height: 400px; padding: 10px"
@@ -41,15 +40,11 @@
 </div>
 
 <script>
-    function doSearchrepaymentPlan() {
-        $('#grid_repaymentPlan').datagrid('load', {
-            Key: $('#Key').val()
-        });
-    }
 
     // 添加
     function doAddrepaymentPlan() {
-        $('#dlg_repaymentPlan').dialog("open").dialog('refresh', App.getUrl('/RepaymentPlan/add'));
+       
+        $('#dlg_repaymentPlan').dialog("open").dialog('refresh', App.getUrl('/RepaymentPlan/add?ContractGUID=' + $("#guidBoxforActualPayment").val()));
     }
 
     // 删除

@@ -73,9 +73,10 @@ namespace EIP.Web.Controllers
         /// </summary>
         /// <returns></returns>
         [ActionName("add")]
-        public ActionResult Add()
+        public ActionResult Add(Guid ContractGUID)
         {
             var entity = new RepaymentPlan();
+            entity.ContractGUID = ContractGUID;
             return View("~/views/repaymentplan/form.cshtml", entity);
         }
 

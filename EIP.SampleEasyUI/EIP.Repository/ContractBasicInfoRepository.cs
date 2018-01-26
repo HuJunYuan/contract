@@ -41,7 +41,7 @@ namespace EIP.Repository
         {
             //查询数据
             var searchKey = (string.IsNullOrEmpty(model.Key) ? "%" : "%" + model.Key.Trim() + "%");
-            string sql = "select * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and ContractGUID like @p0 ";
+            string sql = "select * from dbo.ContractBasicInfo where LogicDeleteFlag=0 and EntryName like @p0 ";
 
             //分页查询必须要有排序字段
             model.SortField = string.IsNullOrEmpty(model.SortField) ? "ContractGUID" : model.SortField;
@@ -62,8 +62,6 @@ namespace EIP.Repository
         /// <summary>
         /// 查询记录项目的一些基本信息
         /// </summary>
-        /// <param name="model">翻页查询基本条件</param>
-        /// <param name="totalCount">整体查询结果件数</param>
         /// <returns></returns>
         public List<ContractBasicInfo> QueryContractBasicInfo()
         {
@@ -72,6 +70,33 @@ namespace EIP.Repository
           
         }
 
+        /// <summary>
+        /// 查询记录项目的一些基本信息
+        /// </summary>
+        /// <param name="key">查询关键字</param>
+        /// <param name="value">查询需要匹配的值</param>
+        /// <returns></returns>
+        public List<ContractBasicInfo> QueryContractBasicInfo(String key, String value)
+        {
 
+
+            List<ContractBasicInfo> conList = new List<ContractBasicInfo>();
+
+
+
+         switch (key)
+          {
+                case "EntryName":
+                  conList = this.GetEntity().Where(s => s.EntryName.Contains(value)).ToList();
+                    break;
+                case "CustomerName":
+                  conList = this.GetEntity().Where(s => s.CustomerName.Contains(value)).ToList();
+                    break;
+                case "Abbreviation":
+                  conList = this.GetEntity().Where(s => s.Abbreviation.Contains(value)).ToList();
+                    break;
+            }
+            return conList;
+        }
     }
 }

@@ -130,6 +130,27 @@ namespace EIP.Service
 
         #region private method
 
+        /// <summary>
+        /// 查询记录项目的一些基本信息添补上已回款总金额
+        /// <param name="key">查询关键字</param>
+        /// <param name="value">查询需要匹配的值</param>
+        /// <returns></returns>
+        public List<ContractBasicInfoViewModel> QueryContractBasicInfo(String key, String value)
+        {
+            var contractList = contractBasicInfoRepository.QueryContractBasicInfo(key, value);
+            List<ContractBasicInfoViewModel> conViewModels = new List<ContractBasicInfoViewModel>();
+
+            foreach (var item in contractList)
+            {
+                ContractBasicInfoViewModel temp = new ContractBasicInfoViewModel();
+                temp = Mapper.Map<ContractBasicInfo, ContractBasicInfoViewModel>(item, temp);
+                temp.TotalActualPayment = actualPaymentRepository.queryTotolMoney(item.ContractGUID);
+                conViewModels.Add(temp);
+
+            }
+            return conViewModels;
+        }
+
         #endregion
     }
 }

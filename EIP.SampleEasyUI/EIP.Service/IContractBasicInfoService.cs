@@ -28,6 +28,12 @@ namespace EIP.Service
         /// <param name="totalCount">整体查询结果件数</param>
         /// <returns></returns>
         List<ContractBasicInfo> QueryContractBasicInfo(QueryModel model, out int totalCount);
+        /// <summary>
+        /// 查询记录项目的一些基本信息添补上已回款总金额
+        /// <param name="key">查询关键字</param>
+        /// <param name="value">查询需要匹配的值</param>
+        /// <returns></returns>
+        List<ContractBasicInfoViewModel> QueryContractBasicInfo(String key, String value);
 
         /// <summary>
         /// 处理记录项目的一些基本信息

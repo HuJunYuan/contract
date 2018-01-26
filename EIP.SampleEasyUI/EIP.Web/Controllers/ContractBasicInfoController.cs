@@ -37,15 +37,11 @@ namespace EIP.Web.Controllers
         /// </summary>
         /// <returns></returns>
         [ActionName("query_contractBasicInfo")]
-        public JsonResult QueryContractBasicInfo(QueryModel model)
+        public JsonResult QueryContractBasicInfo(String key, String value)
         {
             var result = new QueryResultModel();
-            int totalCount = 0;
-
             var contractBasicInfoService = this.GetService<IContractBasicInfoService>();
-            result.Data = contractBasicInfoService.QueryContractBasicInfo(model, out totalCount);
-            result.Total = totalCount;
-
+            result.Data = contractBasicInfoService.QueryContractBasicInfo(key,value);
             return Json(result);
         }
 

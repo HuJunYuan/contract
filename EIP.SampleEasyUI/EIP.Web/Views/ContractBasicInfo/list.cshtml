@@ -7,20 +7,21 @@
 <body class="easyui-layout">
 
     <div data-options="region:'south',title:'回款信息',split:true" style="height:200px;">
-        <div style="width:50%; float:left;background:lightblue;height:100%;"> <div id="receiveMoney" class="easyui-panel" >test1</div></div>
+        <div style="width:50%; float:left;background:lightblue;height:100%;"> <div id="receiveMoney" class="easyui-panel">test1</div></div>
         <div style="width:50%;float:left;background:lightyellow;height:100%;"><div id="receiveMoneyPlan" class="easyui-panel">test2</div></div>
     </div>
 
     @*右边工具栏*@
-    <div id="east" data-options="region:'east',title:'工具'" style="width:180px;">
+    <div id="east" data-options="region:'east',title:'工具'" style="width:17%;">
+        <input id="searchinputbox" style="width:90%;" />
+        <div id="mm" style="width:60px">
+            <div data-options="name:'EntryName'">项目名称</div>
+            <div data-options="name:'CustomerName'">顾客名字</div>
+            <div data-options="name:'Abbreviation'">项目简称</div>
+        </div>
         <p> <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAddNewContract()">添加新合同信息</a> </p>
         <p> <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDelContract()">删除选中的合同信息</a> </p>
-        <p>
-            @Html.CLTextBox("Key", "", new TextBox() { Prompt = "请输入", Style = "width:95%;" })
-        </p>
-        <p>
-            <a href="#" class="easyui-linkbutton" iconcls="icon-search" onclick="doSearchContract()">查询</a>
-        </p>
+
     </div>
 
 
@@ -80,24 +81,29 @@
 
     //加载回款项
     function doOpenReceiveMoney() {
-       
+
        var row = $('#grid_contractBasicInfo').datagrid('getSelected');
-        
+
        $("#receiveMoney").panel("refresh", '/ActualPayment/list?ContractGUID=' + row.ContractGUID);
-       
+
         $("#receiveMoneyPlan").panel('refresh', '/RepaymentPlan/list?ContractGUID=' + row.ContractGUID);
-      
-       
+
+
 
     }
 
 
-    //搜索
-    function doSearchContract() {
-        $('#grid_contractBasicInfo').datagrid('load', {
-            Key: $('#Key').val()
-        });
-    }
+
+
+    //通过构造搜索
+    $('#searchinputbox').searchbox({
+        searcher: function (value, name) {
+            $("#grid_contractBasicInfo").datagrid({ url: '/ContractBasicInfo/query_contractBasicInfo?key=' + name + '&value=' + value });
+        },
+        menu: '#mm',
+        prompt: '请输入'
+    });
+
 
     // 添加
     function doAddNewContract() {

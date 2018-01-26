@@ -64,9 +64,13 @@ namespace EIP.Repository
             return this.GetEntity().Where(p => p.LogicDeleteFlag == false && p.ContractGUID == ContractGUID).ToList();
         }
 
-        public decimal queryTotolMoney(Guid contractGuid)
+        public decimal? queryTotolMoney(Guid contractGuid)
         {
-            return this.GetEntity().Where(s => s.LogicDeleteFlag == false && s.ContractGUID == contractGuid).Sum(s => s.ActualPaymentAmount).Value;
+            decimal? total = 0;
+            if (this.GetEntity().Where(s => s.LogicDeleteFlag == false && s.ContractGUID == contractGuid).Count() > 0)
+                total = this.GetEntity().Where(s => s.LogicDeleteFlag == false && s.ContractGUID == contractGuid).Sum(s => s.ActualPaymentAmount).Value;
+                
+            return total;
         }
     }
 }

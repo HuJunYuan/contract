@@ -36,5 +36,13 @@ namespace EIP.Service
         /// <param name="model">记录项目的一些基本信息信息</param>
         /// <returns>处理是否成功</returns>
         Guid SaveContractBasicInfo(ContractBasicInfo model);
+
+        // <summary>
+        /// 查询记录项目的一些基本信息添补上已回款总金额
+        /// </summary>
+        /// <param name="model">翻页查询基本条件</param>
+        /// <param name="totalCount">整体查询结果件数</param>
+        /// <returns></returns>
+        List<ContractBasicInfoViewModel> QueryContractBasicInfoWithTotalActualPayment();
     }
 }

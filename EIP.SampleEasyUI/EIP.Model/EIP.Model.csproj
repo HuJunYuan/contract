@@ -63,6 +63,7 @@
     <Compile Include="Models\UploadResultDataModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\AppConfigViewModel.cs" />
+    <Compile Include="ViewModels\ContractViewModels.cs" />
     <Compile Include="ViewModels\CodeMasterListViewModel.cs" />
   </ItemGroup>
   <ItemGroup>

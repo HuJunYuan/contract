@@ -49,6 +49,20 @@ namespace EIP.Web.Controllers
             return Json(result);
         }
 
+
+        /// <summary>
+        /// 查询记录项目的一些基本信息列表，附上回款总金额
+        /// </summary>
+        /// <returns></returns>
+        [ActionName("query_contractBasicInfoWithTotalActualPayment")]
+        public JsonResult QueryContractBasicInfoWithTotalActualPayment()
+        {
+            var result = new QueryResultModel();
+            var contractBasicInfoService = this.GetService<IContractBasicInfoService>();
+            result.Data = contractBasicInfoService.QueryContractBasicInfoWithTotalActualPayment();
+            return Json(result);
+        }
+
         /// <summary>
         /// 记录项目的一些基本信息新增视图
         /// </summary>

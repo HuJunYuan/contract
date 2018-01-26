@@ -28,7 +28,8 @@ namespace EIP.Service.AutoMapper.Profiles
                 .ForMember(des => des.ContractBasicInfo, map => map.Ignore());
 
 
-
+            CreateMap<ContractBasicInfo, ContractBasicInfoViewModel>()
+                .ForMember(des=>des.TotalActualPayment,map=>map.Ignore());
 
 
 

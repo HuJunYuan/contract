@@ -55,7 +55,7 @@
         singleSelect: true,
         pagination: true,
         fit: true,
-        url: 'query_contractBasicInfo',
+        url: 'query_contractBasicInfoWithTotalActualPayment',
         onClickRow:doOpenReceiveMoney,
         onDblClickRow: doDetailContract,
         columns: [[
@@ -71,8 +71,9 @@
             { field: 'Scale', title: '规模', width: 100, align: 'center' },
             { field: 'StartTime', title: '服务开始时间', width: 100, align: 'center'},
             { field: 'EndTime', title: '服务结束时间', width: 100, align: 'center' },
-            { field: 'BelongToYear', title: '产值所属年', width: 100, align: 'center'},
-            { field: 'ActualPayments', title: '实际回款金额', width: 100, align: 'center'},
+            { field: 'BelongToYear', title: '产值所属年', width: 100, align: 'center' },
+            { field: 'TotalActualPayment', title: '实际回款总金额', width: 100, align: 'center' },
+            { field: 'ActualPayments', title: '实际回款金额', width: 100, align: 'center', hidden: true },
             { field: 'Remarks', title: '备注', width: 100, align: 'center'},
         ]]
     });

@@ -17,7 +17,6 @@ using CoreLand.Framework.Data;
 using CoreLand.Framework.Code;
 using EIP.Model;
 using EIP.Entity;
-
 namespace EIP.Repository
 {
     /// <summary>
@@ -58,6 +57,21 @@ namespace EIP.Repository
 
             return contractBasicInfos;
         }
+
+
+        /// <summary>
+        /// 查询记录项目的一些基本信息
+        /// </summary>
+        /// <param name="model">翻页查询基本条件</param>
+        /// <param name="totalCount">整体查询结果件数</param>
+        /// <returns></returns>
+        public List<ContractBasicInfo> QueryContractBasicInfo()
+        {
+            var results = this.GetEntity().Where(s => s.LogicDeleteFlag == false).ToList();
+            return results;
+          
+        }
+
 
     }
 }

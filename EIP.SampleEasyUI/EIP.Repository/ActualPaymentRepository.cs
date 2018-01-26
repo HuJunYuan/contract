@@ -63,5 +63,10 @@ namespace EIP.Repository
         public List<ActualPayment> QueryActualPaymentByContractGuid(Guid ContractGUID) {
             return this.GetEntity().Where(p => p.LogicDeleteFlag == false && p.ContractGUID == ContractGUID).ToList();
         }
+
+        public decimal queryTotolMoney(Guid contractGuid)
+        {
+            return this.GetEntity().Where(s => s.LogicDeleteFlag == false && s.ContractGUID == contractGuid).Sum(s => s.ActualPaymentAmount).Value;
+        }
     }
 }

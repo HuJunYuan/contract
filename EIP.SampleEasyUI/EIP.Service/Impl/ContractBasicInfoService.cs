@@ -42,6 +42,12 @@ namespace EIP.Service
         /// </summary>
         private ContractBasicInfoRepository contractBasicInfoRepository = null;
 
+
+        /// <summary>
+        /// 记录实际回款信息仓储
+        /// </summary>
+        private ActualPaymentRepository actualPaymentRepository = null;
+
         /// <summary>
         /// 构造函数
         /// </summary>
@@ -51,6 +57,7 @@ namespace EIP.Service
             : base(uow, factory)
         {
             contractBasicInfoRepository = this.CreateRepository<ContractBasicInfoRepository>();
+            actualPaymentRepository = this.CreateRepository<ActualPaymentRepository>();
         }
 
         #endregion
@@ -69,6 +76,28 @@ namespace EIP.Service
         }
 
         /// <summary>
+        /// 查询记录项目的一些基本信息添补上已回款总金额
+        /// </summary>
+        /// <param name="model">翻页查询基本条件</param>
+        /// <param name="totalCount">整体查询结果件数</param>
+        /// <returns></returns>
+        public List<ContractBasicInfoViewModel> QueryContractBasicInfoWithTotalActualPayment()
+        {
+            var contractList = contractBasicInfoRepository.QueryContractBasicInfo();
+            List<ContractBasicInfoViewModel> conViewModels = new List<ContractBasicInfoViewModel>();
+
+            foreach (var item in contractList)
+            {
+                ContractBasicInfoViewModel temp = new ContractBasicInfoViewModel();
+                temp = Mapper.Map<ContractBasicInfo, ContractBasicInfoViewModel>(item, temp);
+                temp.TotalActualPayment = actualPaymentRepository.queryTotolMoney(item.ContractGUID);
+                conViewModels.Add(temp);
+
+            }
+            return conViewModels;
+        }
+
+        /// <summary>
         /// 处理记录项目的一些基本信息
         /// 根据 id 编号判断是否是添加还是更新，然后调用相应的方法进行处理
         /// </summary>
@@ -82,8 +111,8 @@ namespace EIP.Service
             //更新数据 ， 否则新增数据
             if (entity != null)
             {
-                entity.ActualPayments.ForEach(s => {  s.ContractBasicInfo = entity; });
-                entity.RepaymentPlans.ForEach(r => {  r.ContractBasicInfo = entity; });
+                entity.ActualPayments.ForEach(s => { s.ContractBasicInfo = entity; });
+                entity.RepaymentPlans.ForEach(r => { r.ContractBasicInfo = entity; });
                 //更新数据
                 entity = Mapper.Map<ContractBasicInfo, ContractBasicInfo>(model, entity);
                 this.contractBasicInfoRepository.Update(entity);
@@ -97,10 +126,10 @@ namespace EIP.Service
 
             return model.ContractGUID;
         }
-		#endregion
+        #endregion
 
         #region private method
 
-		#endregion
+        #endregion
     }
 }

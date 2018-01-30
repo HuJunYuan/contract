@@ -10,6 +10,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
+using CoreLand.Framework;
 using CoreLand.Framework.UnitTest;
 using CoreLand.Framework.Aop;
 using CoreLand.Framework.Authentication;
@@ -33,31 +34,77 @@ namespace EIP.ServiceTest
 
             // 服务实例获取
             service = this.GetService<IRepaymentPlanService>();
+            AppContext.User = AppContext.ServiceFactory.GetMembershipAdapter().FindBy("eip"); 
         }
 
 
         [TestMethod]
         public void QueryRepaymentPlan()
         {
-            //查询数据
-            QueryModel model = new QueryModel();
-            int totalCount = 0;
-            model.Key = "test";
-            model.PageIndex = 1;
-            model.PageSize = 10;
+            //插入一条数据
+            RepaymentPlan model = new RepaymentPlan();
+            service.SaveRepaymentPlan(model);
+            service.ServiceContext.Commit();
+            Assert.IsTrue(model.RepaymentPlantGUID != null);
 
-            var repaymentPlans = service.QueryRepaymentPlan(model, out totalCount);
+            //更新这条数据
+            model.RepaymentPlanAmount = 1001;
+            service.SaveRepaymentPlan(model);
+            service.ServiceContext.Commit();
+            Assert.IsTrue(model.RepaymentPlanAmount == 1001);
+
+            //设置关键字查询数据
+            QueryModel querymodel = new QueryModel();
+            int totalCount = 0;
+            querymodel.Key = model.RepaymentPlantGUID.ToString();
+            querymodel.PageIndex = 1;
+            querymodel.PageSize = 10;
+            var list = service.QueryRepaymentPlan(querymodel, out totalCount);
+            Assert.IsTrue(list.Count() > 0);
+
+            //不设置关键字查询数据
+            QueryModel querymodel1 = new QueryModel();
+            int totalCount1 = 0;
+            querymodel1.Key = "";
+            querymodel1.PageIndex = 1;
+            querymodel1.PageSize = 10;
+            var list1 = service.QueryRepaymentPlan(querymodel, out totalCount1);
+            Assert.IsTrue(list1.Count() > 0);
+
+            //删除这条数据
+            service.Delete<ActualPayment>(model.RepaymentPlantGUID);
 
         }
 
         [TestMethod]
         public void SaveRepaymentPlan()
         {
-            RepaymentPlan model = new RepaymentPlan{
-                
-            };
+
+            //插入一条数据
+            RepaymentPlan model = new RepaymentPlan();
             service.SaveRepaymentPlan(model);
-			service.ServiceContext.Commit();
+            service.ServiceContext.Commit();
+            Assert.IsTrue(model.RepaymentPlantGUID != null);
+
+            //更新这条数据
+            model.RepaymentPlanAmount = 1001;
+            service.SaveRepaymentPlan(model);
+            service.ServiceContext.Commit();
+            Assert.IsTrue(model.RepaymentPlanAmount == 1001);
+
+            //删除这条数据
+            service.Delete<ActualPayment>(model.RepaymentPlantGUID);
+        }
+
+        [TestMethod]
+        public void QueryRepaymentPlanByContractGuid()
+        {
+            //创建一个新的GUID
+            Guid guid = Guid.NewGuid();
+
+            //通过这个新产生的GUID去查，应返回0个
+            var model = service.QueryRepaymentPlanByContractGuid(guid);
+            Assert.IsTrue(model.Count() == 0);
         }
     }
 }

@@ -21,13 +21,13 @@ namespace EIP.Service
     public interface IContractBasicInfoService : IEntityService, IService
     {
 
-        /// <summary>
-        /// 查询记录项目的一些基本信息
-        /// </summary>
-        /// <param name="model">翻页查询基本条件</param>
-        /// <param name="totalCount">整体查询结果件数</param>
-        /// <returns></returns>
-        List<ContractBasicInfo> QueryContractBasicInfo(QueryModel model, out int totalCount);
+       // /// <summary>
+       // /// 查询记录项目的一些基本信息
+       // /// </summary>
+       // /// <param name="model">翻页查询基本条件</param>
+       // /// <param name="totalCount">整体查询结果件数</param>
+       // /// <returns></returns>
+       // List<ContractBasicInfo> QueryContractBasicInfo(QueryModel model, out int totalCount);
         /// <summary>
         /// 查询记录项目的一些基本信息添补上已回款总金额
         /// <param name="key">查询关键字</param>

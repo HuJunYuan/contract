@@ -11,6 +11,7 @@ using System.Collections.Generic;
 using Newtonsoft.Json;
 
 using CoreLand.Framework.UnitTest;
+using CoreLand.Framework;
 using CoreLand.Framework.Aop;
 using CoreLand.Framework.Authentication;
 using EIP.Entity;
@@ -33,31 +34,103 @@ namespace EIP.ServiceTest
 
             // 服务实例获取
             service = this.GetService<IContractBasicInfoService>();
+            AppContext.User = AppContext.ServiceFactory.GetMembershipAdapter().FindBy("eip");
+            
+        }
+        [TestMethod]
+        public void QueryContractBasicInfoWithTotalActualPayment()
+        {
+            var list = service.QueryContractBasicInfoWithTotalActualPayment(1, 10);
+            Assert.IsTrue(list.Count() >= 0);
         }
 
 
         [TestMethod]
+        public void testGetTotalCount()
+        {
+            //查询已有数据条数
+            int count1 = service.getTotalCount();
+            Assert.IsTrue(count1 >= 0);
+        }
+
+        [TestMethod]
         public void QueryContractBasicInfo()
         {
-            //查询数据
-            QueryModel model = new QueryModel();
-            int totalCount = 0;
-            model.Key = "test";
-            model.PageIndex = 1;
-            model.PageSize = 10;
 
-            var contractBasicInfos = service.QueryContractBasicInfo(model, out totalCount);
+            //查询一共有多少条数据
+            int count1 = service.getTotalCount();
+
+            //插入一个数据
+            ContractBasicInfo model = new ContractBasicInfo();
+            model.LogicDeleteFlag = false;
+            model.EntryName = "test1";
+            model.CustomerName = "test";
+            model.Abbreviation = "test";
+            service.SaveContractBasicInfo(model);
+            service.ServiceContext.Commit();
+
+            //更新刚才插入的数据
+            model.EntryName = "test";
+            service.SaveContractBasicInfo(model);
+            service.ServiceContext.Commit();
+
+            //为其插入list
+            model.ActualPayments = new List<ActualPayment>();
+            model.RepaymentPlans = new List<RepaymentPlan>();
+            service.SaveContractBasicInfo(model);
+            service.ServiceContext.Commit();
+
+            //查询数据量有没有增加一条
+            int count2 = service.getTotalCount();
+            Assert.AreEqual(count1, count2 - 1);
+
+           
+            //测试通过传入的查询字段及值来查询数据库
+            var enteryNumList = service.QueryContractBasicInfo("EntryName", "test");
+            Assert.IsTrue(enteryNumList.Count() >0);
+           var CustomerNameList= service.QueryContractBasicInfo("CustomerName", "test");
+            Assert.IsTrue(CustomerNameList.Count() >0);
+            var AbbreList = service.QueryContractBasicInfo("Abbreviation","test" );
+            Assert.IsTrue(AbbreList.Count() >0);
+
+            //删除刚才插入的数据
+            service.Delete<ContractBasicInfo>(model.ContractGUID);
+            Assert.AreEqual(count1, service.getTotalCount());
+
 
         }
 
         [TestMethod]
         public void SaveContractBasicInfo()
         {
-            ContractBasicInfo model = new ContractBasicInfo{
-                
-            };
+            //查询一共有多少条数据
+            int count1 = service.getTotalCount();
+
+            //插入一个数据
+            ContractBasicInfo model = new ContractBasicInfo();
+            model.LogicDeleteFlag = false;
+            model.EntryName = "test";
             service.SaveContractBasicInfo(model);
 			service.ServiceContext.Commit();
+
+            //更新刚才插入的数据
+            model.EntryName = "test2";
+            service.SaveContractBasicInfo(model);
+            service.ServiceContext.Commit();
+
+            //为其插入list
+            model.ActualPayments = new List<ActualPayment>();
+            model.RepaymentPlans = new List<RepaymentPlan>(); 
+            service.SaveContractBasicInfo(model);
+            service.ServiceContext.Commit();
+
+            //查询数据量有没有增加一条
+            int count2 = service.getTotalCount();
+            Assert.AreEqual(count1, count2 - 1);
+
+            //删除刚才插入的数据
+            service.Delete<ContractBasicInfo>(model.ContractGUID);
+            Assert.AreEqual(count1, service.getTotalCount());
         }
     }
 }

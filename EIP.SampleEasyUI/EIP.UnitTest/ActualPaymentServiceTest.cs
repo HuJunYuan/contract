@@ -9,7 +9,7 @@ using System.Linq;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
 using Newtonsoft.Json;
-
+using CoreLand.Framework;
 using CoreLand.Framework.UnitTest;
 using CoreLand.Framework.Aop;
 using CoreLand.Framework.Authentication;
@@ -33,31 +33,78 @@ namespace EIP.ServiceTest
 
             // 服务实例获取
             service = this.GetService<IActualPaymentService>();
+            AppContext.User = AppContext.ServiceFactory.GetMembershipAdapter().FindBy("eip");
         }
 
 
         [TestMethod]
         public void QueryActualPayment()
         {
-            //查询数据
-            QueryModel model = new QueryModel();
-            int totalCount = 0;
-            model.Key = "test";
-            model.PageIndex = 1;
-            model.PageSize = 10;
 
-            var actualPayments = service.QueryActualPayment(model, out totalCount);
+
+            //插入一条数据
+            ActualPayment model = new ActualPayment();
+            service.SaveActualPayment(model);
+            service.ServiceContext.Commit();
+            Assert.IsTrue(model.ActualPaymentGUID != null);
+
+            //更新这条数据
+            model.ActualPaymentAmount = 1001;
+            service.SaveActualPayment(model);
+            service.ServiceContext.Commit();
+            Assert.IsTrue(model.ActualPaymentAmount == 1001);
+
+            //设置关键字查询数据
+            QueryModel querymodel = new QueryModel();
+            int totalCount = 0;
+            querymodel.Key = model.ActualPaymentGUID.ToString();
+            querymodel.PageIndex = 1;
+            querymodel.PageSize = 10;
+            var actualPayments = service.QueryActualPayment(querymodel, out totalCount);
+            Assert.IsTrue(actualPayments.Count() > 0);
+
+            //不设置关键字查询数据
+            QueryModel querymodel1 = new QueryModel();
+            int totalCount1 = 0;
+            querymodel1.Key = "";
+            querymodel1.PageIndex = 1;
+            querymodel1.PageSize = 10;
+            var actualPayments1 = service.QueryActualPayment(querymodel, out totalCount1);
+            Assert.IsTrue(actualPayments1.Count() > 0);
+
+            //删除这条数据
+            service.Delete<ActualPayment>(model.ActualPaymentGUID);
 
         }
 
         [TestMethod]
         public void SaveActualPayment()
         {
-            ActualPayment model = new ActualPayment{
-                
-            };
+            //插入一条数据
+            ActualPayment model = new ActualPayment();
             service.SaveActualPayment(model);
 			service.ServiceContext.Commit();
+            Assert.IsTrue(model.ActualPaymentGUID != null);
+
+            //更新这条数据
+            model.ActualPaymentAmount = 1001;
+            service.SaveActualPayment(model);
+            service.ServiceContext.Commit();
+            Assert.IsTrue(model.ActualPaymentAmount==1001);
+
+            //删除这条数据
+            service.Delete<ActualPayment>(model.ActualPaymentGUID);
+        }
+
+        [TestMethod]
+        public void QueryActualPaymentByContractGuid()
+        {
+            //创建一个新的GUID
+            Guid guid = Guid.NewGuid();
+
+            //通过这个新产生的GUID去查，应返回0个
+            var model = service.QueryActualPaymentByContractGuid(guid);
+            Assert.IsTrue(model.Count() == 0);
         }
     }
 }

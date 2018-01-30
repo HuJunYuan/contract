@@ -81,9 +81,9 @@ namespace EIP.Service
         /// <param name="model">翻页查询基本条件</param>
         /// <param name="totalCount">整体查询结果件数</param>
         /// <returns></returns>
-        public List<ContractBasicInfoViewModel> QueryContractBasicInfoWithTotalActualPayment()
+        public List<ContractBasicInfoViewModel> QueryContractBasicInfoWithTotalActualPayment(int pageNumber, int pageSize)
         {
-            var contractList = contractBasicInfoRepository.QueryContractBasicInfo();
+            var contractList = contractBasicInfoRepository.QueryContractBasicInfo(pageNumber,pageSize);
             List<ContractBasicInfoViewModel> conViewModels = new List<ContractBasicInfoViewModel>();
 
             foreach (var item in contractList)
@@ -151,6 +151,12 @@ namespace EIP.Service
             return conViewModels;
         }
 
+        /// <summary>
+        /// 获取数据库数据总条数
+        /// <returns></returns>
+        public int getTotalCount() {
+            return contractBasicInfoRepository.getTotalCount();
+        }
         #endregion
     }
 }

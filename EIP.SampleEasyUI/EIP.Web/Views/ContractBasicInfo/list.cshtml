@@ -7,8 +7,8 @@
 <body class="easyui-layout">
 
     <div data-options="region:'south',title:'回款信息',split:true" style="height:200px;">
-        <div style="width:50%; float:left;background:lightblue;height:100%;"> <div id="receiveMoney" class="easyui-panel">test1</div></div>
-        <div style="width:50%;float:left;background:lightyellow;height:100%;"><div id="receiveMoneyPlan" class="easyui-panel">test2</div></div>
+        <div style="width:50%; float:left;height:100%;background:lightblue;"> <div id="receiveMoney" class="easyui-panel"></div></div>
+        <div style="width:50%;float:left;height:100%;background:lightyellow;"><div id="receiveMoneyPlan" class="easyui-panel"></div></div>
     </div>
 
     @*右边工具栏*@
@@ -21,7 +21,7 @@
         </div>
         <p> <a href="#" class="easyui-linkbutton" iconcls="icon-add" plain="true" onclick="doAddNewContract()">添加新合同信息</a> </p>
         <p> <a href="#" class="easyui-linkbutton" iconcls="icon-remove" plain="true" onclick="doDelContract()">删除选中的合同信息</a> </p>
-
+        <p> <a href="#" class="easyui-linkbutton" iconcls="icon-reload" plain="true" onclick="doRefresh()">刷新合同信息</a> </p>
     </div>
 
 
@@ -77,7 +77,14 @@
             { field: 'ActualPayments', title: '实际回款金额', width: 100, align: 'center', hidden: true },
             { field: 'Remarks', title: '备注', width: 100, align: 'center'},
         ]]
+        
     });
+
+    //刷新合同信息表格
+    function doRefresh() {
+        $("#grid_contractBasicInfo").datagrid("reload");
+    }
+
 
     //加载回款项
     function doOpenReceiveMoney() {
@@ -91,10 +98,7 @@
 
 
     }
-
-
-
-
+    
     //通过构造搜索
     $('#searchinputbox').searchbox({
         searcher: function (value, name) {

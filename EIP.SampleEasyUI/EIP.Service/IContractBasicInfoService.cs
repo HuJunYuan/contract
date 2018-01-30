@@ -49,6 +49,15 @@ namespace EIP.Service
         /// <param name="model">翻页查询基本条件</param>
         /// <param name="totalCount">整体查询结果件数</param>
         /// <returns></returns>
-        List<ContractBasicInfoViewModel> QueryContractBasicInfoWithTotalActualPayment();
+        List<ContractBasicInfoViewModel> QueryContractBasicInfoWithTotalActualPayment(int pageNumber, int pageSize);
+
+        /// <summary>
+        /// 获取数据库数据总条数
+        /// <returns></returns>
+        int getTotalCount();
     }
+    
+
+
+
 }

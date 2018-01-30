@@ -73,6 +73,26 @@ namespace EIP.Repository
         /// <summary>
         /// 查询记录项目的一些基本信息
         /// </summary>
+        /// <param name="pageNumber">查询页数</param>
+        /// <param name="pageSize">查询页面大小</param>
+        /// <returns></returns>
+        public List<ContractBasicInfo> QueryContractBasicInfo(int pageNumber, int pageSize) {
+            int totalcount = this.getTotalCount();
+            List<ContractBasicInfo> results = new List<ContractBasicInfo>();
+            if (pageNumber * pageSize > totalcount) {
+                results = this.GetEntity().Where(s => s.LogicDeleteFlag == false).OrderBy(s => s.CreateTime).Skip((pageNumber - 1) * pageSize).Take(totalcount - pageSize*(pageNumber-1)).ToList();
+            }
+            else
+            {
+                results = this.GetEntity().Where(s => s.LogicDeleteFlag == false).OrderBy(s => s.CreateTime).Skip((pageNumber - 1) * pageSize).Take(pageSize).ToList();
+            }
+            
+            return results;
+        }
+
+        /// <summary>
+        /// 查询记录项目的一些基本信息
+        /// </summary>
         /// <param name="key">查询关键字</param>
         /// <param name="value">查询需要匹配的值</param>
         /// <returns></returns>
@@ -97,6 +117,15 @@ namespace EIP.Repository
                     break;
             }
             return conList;
+        }
+
+
+        /// <summary>
+        /// 获取数据库已有数据条数
+        /// </summary>
+        /// <returns></returns>
+        public int getTotalCount() {
+            return this.GetEntity().Where(s => s.LogicDeleteFlag == false).ToList().Count();
         }
     }
 }

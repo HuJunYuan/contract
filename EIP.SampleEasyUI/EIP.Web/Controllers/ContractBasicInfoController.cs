@@ -51,11 +51,15 @@ namespace EIP.Web.Controllers
         /// </summary>
         /// <returns></returns>
         [ActionName("query_contractBasicInfoWithTotalActualPayment")]
-        public JsonResult QueryContractBasicInfoWithTotalActualPayment()
+        public JsonResult QueryContractBasicInfoWithTotalActualPayment(int PageIndex, int PageSize)
         {
             var result = new QueryResultModel();
+            //int pageNumber = PageIndex ==null? 1:int.Parse(PageIndex);     //第几页的数据  
+            //int pageSize = PageSize == null ? 10: int.Parse(PageSize);  //每页多少条数据  
+            
             var contractBasicInfoService = this.GetService<IContractBasicInfoService>();
-            result.Data = contractBasicInfoService.QueryContractBasicInfoWithTotalActualPayment();
+            result.Data = contractBasicInfoService.QueryContractBasicInfoWithTotalActualPayment(PageIndex,PageSize);
+            result.Total = contractBasicInfoService.getTotalCount();
             return Json(result);
         }
 

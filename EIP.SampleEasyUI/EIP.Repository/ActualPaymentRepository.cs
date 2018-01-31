@@ -59,11 +59,19 @@ namespace EIP.Repository
             return actualPayments;
         }
 
-        //通过合同ID查询实际回款信息
+        /// <summary>
+        /// 通过合同ID查询实际回款信息
+        /// </summary>
+        /// <param name="ContractGUID">所属合同GUID</param>
+        /// <returns>符合条件的实际回款列表</returns>
         public List<ActualPayment> QueryActualPaymentByContractGuid(Guid ContractGUID) {
             return this.GetEntity().Where(p => p.LogicDeleteFlag == false && p.ContractGUID == ContractGUID).ToList();
         }
 
+        /// <summary>
+        /// 通过合同ID查询实际回款总额
+        /// </summary>
+        /// <param name="ContractGUID">所属合同GUID</param>
         public decimal? queryTotolMoney(Guid contractGuid)
         {
             decimal? total = 0;

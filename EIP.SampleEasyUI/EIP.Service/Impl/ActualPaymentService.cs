@@ -86,7 +86,6 @@ namespace EIP.Service
                 entity = Mapper.Map<ActualPayment, ActualPayment>(model, entity);
                 
                 this.actualPaymentRepository.Update(entity);
-               // this.ServiceContext.Commit();
             }
             else
             {

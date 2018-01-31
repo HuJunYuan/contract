@@ -58,6 +58,11 @@ namespace EIP.Repository
 
             return repaymentPlans;
         }
+        /// <summary>
+        /// 通过合同ID查询回款计划信息
+        /// </summary>
+        /// <param name="ContractGUID">所属合同GUID</param>
+        /// <returns>符合条件的回款计划列表</returns>
         public List<RepaymentPlan> QueryRepaymentPlanByContractGuid(Guid ContractGUID)
         {
             return this.GetEntity().Where(p => p.LogicDeleteFlag == false && p.ContractGUID == ContractGUID).ToList();

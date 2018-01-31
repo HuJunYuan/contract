@@ -64,16 +64,6 @@ namespace EIP.Service
 
         #region IContractBasicInfoService method
 
-        ///// <summary>
-        ///// 查询记录项目的一些基本信息
-        ///// </summary>
-        ///// <param name="model">翻页查询基本条件</param>
-        ///// <param name="totalCount">整体查询结果件数</param>
-        ///// <returns></returns>
-        //public List<ContractBasicInfo> QueryContractBasicInfo(QueryModel model, out int totalCount)
-        //{
-        //    return contractBasicInfoRepository.QueryContractBasicInfo(model, out totalCount);
-        //}
 
         /// <summary>
         /// 查询记录项目的一些基本信息添补上已回款总金额
@@ -82,9 +72,13 @@ namespace EIP.Service
         /// <param name="pageSize">分页大小
         public List<ContractBasicInfoViewModel> QueryContractBasicInfoWithTotalActualPayment(int pageNumber, int pageSize)
         {
+            //通过页码和分页大小查出当前页的合同信息列表
             var contractList = contractBasicInfoRepository.QueryContractBasicInfo(pageNumber,pageSize);
+
+            //创建一个合同视同列表对象
             List<ContractBasicInfoViewModel> conViewModels = new List<ContractBasicInfoViewModel>();
 
+            //将每个合同的实际回款总额计算出来
             foreach (var item in contractList)
             {
                 ContractBasicInfoViewModel temp = new ContractBasicInfoViewModel();
@@ -93,6 +87,7 @@ namespace EIP.Service
                 conViewModels.Add(temp);
 
             }
+            //返回结果
             return conViewModels;
         }
 
@@ -142,9 +137,13 @@ namespace EIP.Service
         /// <returns></returns>
         public List<ContractBasicInfoViewModel> QueryContractBasicInfo(String key, String value)
         {
+            //通过关键字和值查询出符合要求的列表
             var contractList = contractBasicInfoRepository.QueryContractBasicInfo(key, value);
+
+            //创建一个合同视图列表对象
             List<ContractBasicInfoViewModel> conViewModels = new List<ContractBasicInfoViewModel>();
 
+            //计算出查出来的合同的实际回款总额
             foreach (var item in contractList)
             {
                 ContractBasicInfoViewModel temp = new ContractBasicInfoViewModel();
@@ -153,6 +152,8 @@ namespace EIP.Service
                 conViewModels.Add(temp);
 
             }
+            
+            //返回结果
             return conViewModels;
         }
 
